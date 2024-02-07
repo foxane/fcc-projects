@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reconn Survey</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Reconn Survey</h1>
+        <p id="description">Help us imrpove our service by filling this survey</p>
+    </header>
+    <main>
+        <form action="#" method="post" id="survey-form">
+            <section class="user-info" id="section1">
+                <h3>Tell us about you</h3>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" required>
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" required>
+                <label for="age" id="number-label">Age</label>
+                <input type="number" name="age" id="age" min="1" max="999" required>
+                <label for="dropdown">Gender</label>
+                <select name="gender" id="dropdown">
+                    <option value="" disabled selected>Pick an option</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="not-sure">Prefer not to say</option>
+                </select>
+                <div class="buttons">
+                    <a href="#section2">Next &rightarrow;</a>
+
+                </div>
+            </section>
+            <section class="survey-questions" id="section2">
+                <h3>Tell us about our service</h3>
+                <!-- TODO:FIX THESE FUKIN LABELS -->
+                <fieldset class="time-using">   
+                    <p>How long have you used our service?</p>
+                    <label>
+                        <input type="radio" name="time-served" value="1-yr-less" id="1-yr-less" checked>1 year or less
+                    </label>
+                    <input type="radio" name="time-served" value="1-2-yr" id="1-2-yr">
+                    <label for="1-2-yr">1 - 2 years</label>
+                    <input type="radio" name="time-served" value="3-or-more" id="3-or-more">
+                    <label for="3-or-more">3 years or more</label>
+                </fieldset>
+                <fieldset class="rating">
+                    <p class="fieldset-description">How would you rate your experience?</p>
+                    <input type="radio" value="good" id="good" name="rating" checked>
+                    <label for="good">Good</label>
+                    <input type="radio" value="bad" id="bad" name="rating">
+                    <label for="bad">Bad</label>
+                    <input type="radio" value="average" id="average" name="rating">
+                    <label for="average">Average</label>
+                </fieldset>
+                <fieldset class="most-like">
+                    <p class="fieldset-description">Which of our services you like the most</p>
+                    <label>
+                        <input type="checkbox" value="plan">Internet Plans
+                    </label>
+                    <label>
+                        <input type="checkbox" value="price">Pricing
+                    </label>
+                    <label>
+                        <input type="checkbox" value="cs">Customer Service
+                    </label>
+                    <label>
+                        <input type="checkbox" value="troubleshoot">Troubleshooting
+                    </label>
+                </fieldset>
+                <div class="buttons">
+                    <a href="#section1">&leftarrow; Back</a>
+                    <a href="#section3">Next &rightarrow;</a>
+                </div>
+            </section>
+            <section class="comments-submit"  id="section3">
+                <fieldset class="comments">
+                    <p class="fieldset-description">Additional comments or suggestions</p>
+                    <textarea placeholder="I hate myself and everyone around me..."></textarea>
+                </fieldset>
+                <fieldset>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </section>
+        </form>
+    </main>
+</body>
+
+</html>
