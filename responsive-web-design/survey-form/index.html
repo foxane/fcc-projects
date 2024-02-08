@@ -18,67 +18,74 @@
             <section class="user-info" id="section1">
                 <h3>Tell us about you</h3>
                 <label for="name" id="name-label">Name</label>
-                <input type="text" id="name" required>
+                <input type="text" id="name" placeholder="Enter your name" required>
                 <label for="email" id="email-label">Email</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
                 <label for="age" id="number-label">Age</label>
-                <input type="number" name="age" id="age" min="1" max="999" required>
+                <input type="number" name="age" id="age" min="1" max="999" placeholder="Enter your age" required>
                 <label for="dropdown">Gender</label>
-                <select name="gender" id="dropdown">
+                <select name="gender" id="dropdown" required>
                     <option value="" disabled selected>Pick an option</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="not-sure">Prefer not to say</option>
                 </select>
                 <div class="buttons">
-                    <a href="#section2" class="first-next-button">Next &rightarrow;</a>
+                    <a href="#section2" class="button">Next &rightarrow;</a>
                 </div>
             </section>
             <section class="survey-questions" id="section2">
                 <h3>Tell us about our service</h3>
                 <!-- TODO:FIX THESE FUKIN LABELS -->
                 <fieldset class="time-using">
-                    <p>How long have you used our service?</p>
+                    <p class="fieldset-description">How long have you used our service?</p>
                     <label>
-                        <input type="radio" name="time-served" value="1-yr-less" id="1-yr-less" checked>1 year or less
+                        <input type="radio" name="time-served" value="1-yr-less" id="1-yr-less" checked><span
+                            class="label-input-space"></span>1 year or less
                     </label>
                     <label>
-                        <input type="radio" name="time-served" value="1-2-yr" id="1-2-yr">1 - 2 years
+                        <input type="radio" name="time-served" value="1-2-yr" id="1-2-yr"><span
+                            class="label-input-space"></span>1 - 2 years
                     </label>
                     <label>
-                        <input type="radio" name="time-served" value="3-or-more" id="3-or-more">3 years or more
+                        <input type="radio" name="time-served" value="3-or-more" id="3-or-more"><span
+                            class="label-input-space"></span>3 years or more
                     </label>
                 </fieldset>
                 <fieldset class="rating">
-                    <p class="fieldset-description">How would you rate your experience?</p>
+                    <p class="fieldset-description">How would you rate your experience with us?</p>
                     <label>
-                        <input type="radio" value="good" id="good" name="rating" checked>Good
+                        <input type="radio" value="good" id="good" name="rating" checked><span
+                            class="label-input-space"></span>Good
                     </label>
                     <label>
-                        <input type="radio" value="average" id="average" name="rating">Average
+                        <input type="radio" value="average" id="average" name="rating"><span
+                            class="label-input-space"></span>Average
                     </label>
                     <label>
-                        <input type="radio" value="bad" id="bad" name="rating">Bad
+                        <input type="radio" value="bad" id="bad" name="rating"><span
+                            class="label-input-space"></span>Bad
                     </label>
                 </fieldset>
                 <fieldset class="most-like">
                     <p class="fieldset-description">Which of our services you like the most</p>
                     <label>
-                        <input type="checkbox" value="plan">Internet Plans
+                        <input type="checkbox" value="plan"><span class="label-input-space"></span>Internet Plans
                     </label>
                     <label>
-                        <input type="checkbox" value="price">Pricing
+                        <input type="checkbox" value="price"><span class="label-input-space"></span>Pricing
                     </label>
                     <label>
-                        <input type="checkbox" value="cs">Customer Service
+                        <input type="checkbox" value="cs"><span class="label-input-space"></span>Customer Service
                     </label>
                     <label>
-                        <input type="checkbox" value="troubleshoot">Troubleshooting
+                        <input type="checkbox" value="troubleshoot"><span
+                            class="label-input-space"></span>Troubleshooting
                     </label>
                 </fieldset>
                 <div class="buttons">
-                    <a href="#section3">Next &rightarrow;</a>
-                    <a href="#section1">&leftarrow; Back</a>
+                    <a href="#section3" class="button">Next &rightarrow;</a>
+                    <a href="#section1" class="button">&leftarrow; Back</a>
                 </div>
             </section>
             <section class="comments-submit" id="section3">
@@ -86,13 +93,16 @@
                 <fieldset class="comments">
                     <textarea placeholder="I hate myself and everyone around me..."></textarea>
                 </fieldset>
-                <fieldset>
-                    <button type="reset">Reset</button>
-                    <button type="submit">Submit</button>
-                </fieldset>
+                <div class="buttons">
+                    <button type="submit" class="button">Submit</button>
+                </div>
             </section>
         </form>
     </main>
+    <footer>
+        <h3>..and that's it</h3>
+        <p>Thank you for your time.</p>
+    </footer>
 </body>
 
 </html>
