@@ -7,10 +7,10 @@ Extra extra large ||	xxl ||	≥1400px
 
 
 TODO :
-1. Change variables color
-2. Background Fix (color, style)
-3. Hover effect
-4. Animations, probably fall to hover effect too. just put comment above it to separate from other properties.
+1. Change variables color ||done
+2. Background Fix (color, style) ||idk hard asf
+3. Hover effect ||done
+4. Animations, probably fall to hover effect too. just put comment above it to separate from other properties.||not yet
 5. Find out about -moz-appearence property
 6. Media queries.
 7. Fine Tune.
