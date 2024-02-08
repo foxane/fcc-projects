@@ -1,34 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 :root {
-    --primary-1:#2ae7de;    /*---60*/
-    --primary-2:#00ccf4;    /*---60*/
-    --secondary-1:#00acfa;  /*---30*/
-    --secondary-2:#6086e7;  /*---30*/
-    --accent-1:#ae2271;     /*---10---headers*/
-    --accent-2:#9b58b6;     /*---10---paragraph-label*/
+    --color:white;
+    --color-0:#000000;
+    --color-1:#EAE0CC;    /*---60*/
+    --color-2:#C9ADA1;  /*---30*/
+    --color-3:#A0A083;     /*---10---headers*/
+    --color-4:#798478;     /*---10---paragraph-label*/
+    --color-5:#4D6A6D;
+    --color-6:#F8FFF4;
+    --color-7:#ccbe3e;
 }
 /*||||||||| START OF UTIL ||||||||||*/
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.5s;
 /*     border: 1px solid black;
  */}
 
-/* START OF REMOVING NUMBER INPUT SCROLLS */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-/* END OF REMOVING SCROLLS */
 
 
 /* ROOT*/
@@ -48,12 +39,10 @@ body {
 
     
 
-    background: var(--primary-1) 
-                linear-gradient( var(--primary-1), var(--primary-2))
+    background: var(--color-1) 
                 center/
                 cover
-                no-repeat
-                fixed ;
+                no-repeat;
     font-family: Rubik, Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     line-height: 1.5em;
@@ -70,27 +59,25 @@ header {
     justify-content: center;
     position: fixed;
 
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 0.3rem 0.3rem;
     text-align: center;
-    background-color: var(--secondary-2);
-    color: var(--accent-1);
+    background-color: var(--color-2);
+    color:var(--color-0);
 }
 #description {
-    font-family:'Times New Roman', Times, serif;
+    margin-top: 0.5rem;
+
+    font-family:Rubik, Times, serif;
     font-size: 1.2rem;
-    font-style: italic;
 }
 
 /* ||||||| CONTAINER ||||||*/
-main {
-    width: 80%;
-    margin: 30vh 0 30vh 0;
-}
 form {
     display: flex;
     flex-flow: column nowrap;
     gap: 100vh;
-
+    width: 80%;
+    margin: 30vh 0 25vh 0;
 }
 
 /* ||||||| BOX ||||||| */
@@ -101,21 +88,37 @@ section {
     height: auto;
     padding: 1rem;
 
-    background:var(--secondary-1);
-    border-radius: 1rem;
+    background:var(--color-2);
+    color:var(--color-0);
+    border-radius: 0.3rem;
 
     scroll-snap-align: center;
 }
-
+section:nth-of-type(1) {
+    background-color: var(--color-3);
+}
+section:nth-of-type(2) {
+    background-color: var(--color-4);
+}
+section:nth-of-type(3) {
+    background-color: var(--color-5);
+}
+section:nth-of-type(3) h3 {
+    color: var(--color);
+}
 /* |||||| BOX ITEMS |||||| */
 h3 {
     text-align: center;
-    color: var(--accent-1);
+    color: var(--color-0);
 }
 section>
 label {
-    color: var(--accent-2);
+    color: var(--color-0);
 }
+section:nth-of-type(1) label {  /* adding spaces for label on first box */
+    margin: 0.5rem 0 0.1rem 0;
+}
+
 input, 
 select {
     height: 1.8rem;
@@ -123,21 +126,23 @@ select {
     font-size: 1.1rem;
     text-indent: 0.4rem;
     
-    background-color: var(--secondary-2);
-    color: var(--accent-2);
-    border: 1px solid var(--secondary-2);
+    background-color: var(--color-1);
+    color: var(--color-0);
+    border: 1px solid var(--color-2);
 }
 
 /* ||||||| BOX ITEMS 2 ||||||| */
 fieldset {
     display: flex;
     flex-flow: column nowrap;
+    margin-top: 2rem;
 
     border: none;
-    border-top: 1px solid var(--accent-2);
 }
 .fieldset-description {
-    color: var(--accent-1);
+    color: var(--color-0);
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 fieldset input {
     height:auto;
@@ -146,7 +151,7 @@ fieldset label {
     margin-left: 1rem;
 
     font-size: 1.1rem;
-    color: var(--accent-2);
+    color: var(--color-0)
 }
 span {
     border: 2px solid transparent;
@@ -154,9 +159,10 @@ span {
 
 /*||||||| BOX ITEMS 3 |||||||*/
 textarea {
-    width: 100%;
+    width: 90%;
     height:5rem;
-    margin: 1rem 0;
+    margin: 0 auto 0 auto;
+    padding: 0.5rem;
 
     border: none;
     border-radius: 0.2rem;
@@ -165,8 +171,8 @@ textarea {
     font-size: inherit;
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: var(--secondary-2);
-    color: var(--accent-2);
+    background-color: var(--color-2);
+    color: var(--color-0);
 
     resize: vertical;
 }
@@ -176,7 +182,7 @@ textarea {
     display: flex;
     flex-flow: row-reverse;
     justify-content: space-between;
-    margin: 0.5rem;
+    margin: 1rem 0 0;
 }
 .button {
     height: 2.5rem;
@@ -184,11 +190,11 @@ textarea {
     padding:0.3rem;
 
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
 
     font-size: inherit;
-    background-color: var(--accent-2);
-    color: var(--accent-1);
+    background-color: var(--color-0);
+    color: var(--color-1);
     text-decoration: none;
 }
 button {
@@ -196,22 +202,50 @@ button {
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
+/* ||||||| FOOTER ||||||| */
 footer {
     width: 80%;
     height: auto;
     padding: 1rem 0 2rem 0;
 
-    border-radius: 1rem 1rem 0 0 ;
+    border-radius: 0.3rem 0.3rem 0 0 ;
 
-    background-color: var(--secondary-1);
+    background-color: var(--color-2);
     text-align: center;
     scroll-snap-align: center;
+}
+
+/* |||| ANIMATIONS |||| */
+header:hover,
+footer:hover {
+    box-shadow: -3px 3px 10px 1px;
+    filter: brightness(110%);
+}
+
+section:hover,
+section:focus,
+section:active {
+    box-shadow: -3px 3px 10px 1px;
+    filter: brightness(110%);
+}
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+    background-color: var(--color-2);
+}
+select:active,
+input:active {
+    outline: red;
+}
+textarea:hover,
+textarea:focus {
+    background-color: var(--color-1);
+    height: 8rem;
+}
+.button:hover,
+.button:focus {
+    background-color: var(--color-1);
+    color: var(--color-0);
+    cursor: pointer;
 }
