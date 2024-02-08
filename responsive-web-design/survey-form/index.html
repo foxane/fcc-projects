@@ -31,31 +31,35 @@
                     <option value="not-sure">Prefer not to say</option>
                 </select>
                 <div class="buttons">
-                    <a href="#section2">Next &rightarrow;</a>
-
+                    <a href="#section2" class="first-next-button">Next &rightarrow;</a>
                 </div>
             </section>
             <section class="survey-questions" id="section2">
                 <h3>Tell us about our service</h3>
                 <!-- TODO:FIX THESE FUKIN LABELS -->
-                <fieldset class="time-using">   
+                <fieldset class="time-using">
                     <p>How long have you used our service?</p>
                     <label>
                         <input type="radio" name="time-served" value="1-yr-less" id="1-yr-less" checked>1 year or less
                     </label>
-                    <input type="radio" name="time-served" value="1-2-yr" id="1-2-yr">
-                    <label for="1-2-yr">1 - 2 years</label>
-                    <input type="radio" name="time-served" value="3-or-more" id="3-or-more">
-                    <label for="3-or-more">3 years or more</label>
+                    <label>
+                        <input type="radio" name="time-served" value="1-2-yr" id="1-2-yr">1 - 2 years
+                    </label>
+                    <label>
+                        <input type="radio" name="time-served" value="3-or-more" id="3-or-more">3 years or more
+                    </label>
                 </fieldset>
                 <fieldset class="rating">
                     <p class="fieldset-description">How would you rate your experience?</p>
-                    <input type="radio" value="good" id="good" name="rating" checked>
-                    <label for="good">Good</label>
-                    <input type="radio" value="bad" id="bad" name="rating">
-                    <label for="bad">Bad</label>
-                    <input type="radio" value="average" id="average" name="rating">
-                    <label for="average">Average</label>
+                    <label>
+                        <input type="radio" value="good" id="good" name="rating" checked>Good
+                    </label>
+                    <label>
+                        <input type="radio" value="average" id="average" name="rating">Average
+                    </label>
+                    <label>
+                        <input type="radio" value="bad" id="bad" name="rating">Bad
+                    </label>
                 </fieldset>
                 <fieldset class="most-like">
                     <p class="fieldset-description">Which of our services you like the most</p>
@@ -73,13 +77,13 @@
                     </label>
                 </fieldset>
                 <div class="buttons">
-                    <a href="#section1">&leftarrow; Back</a>
                     <a href="#section3">Next &rightarrow;</a>
+                    <a href="#section1">&leftarrow; Back</a>
                 </div>
             </section>
-            <section class="comments-submit"  id="section3">
+            <section class="comments-submit" id="section3">
+                <h3>Additional comments or suggestions</h3>
                 <fieldset class="comments">
-                    <p class="fieldset-description">Additional comments or suggestions</p>
                     <textarea placeholder="I hate myself and everyone around me..."></textarea>
                 </fieldset>
                 <fieldset>
