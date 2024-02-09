@@ -8,8 +8,8 @@
     --color-3: #A0A083;
     --color-4: #798478;
     --color-5: #4D6A6D;
-    --color-6: #F8FFF4;
-    --color-7: #ccbe3e;
+    --color-6: red;
+    --color-7: orangered;
 }
 
 /*||||||||| START OF UTIL ||||||||||*/
@@ -34,19 +34,23 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
-    background: center / cover no-repeat
-                var(--color-1)
-                linear-gradient(100deg, var(--color-1), var(--color-3));
-    background-size: 100% 800vh;
+    
+    background: center / cover no-repeat fixed
+    var(--color-1)
+    linear-gradient(110deg, var(--color-1), var(--color-3));
+    background-size: 100%;
     font-family: Rubik, Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     line-height: 1.5em;
+    
+    position: relative;
+    overflow-x: hidden;
 }
 
 /* ||||||| HEADER |||||||*/
 header {
-    width: 80%;
+    width: 100%;
+
     height: 10vh;
 
 
@@ -73,10 +77,12 @@ header {
 
 /* ||||||| CONTAINER ||||||*/
 form {
+    height: auto;
     display: flex;
     flex-flow: column nowrap;
     gap: 100vh;
     width: 80%;
+    max-width: 600px;
     margin: 30vh 0 25vh 0;
 }
 
@@ -203,7 +209,7 @@ textarea {
     width: auto;
     padding: 0.3rem;
 
-    border: none;
+    border: 1px solid var(--color);
     border-radius: 0.3rem;
 
     font-size: inherit;
@@ -211,15 +217,15 @@ textarea {
     color: var(--color-1);
     text-decoration: none;
 }
-
-button {
-    position: relative;
-    margin: 0 auto;
+.buttons-last {
+    width: 90%;
+    margin: 2rem auto 0;
 }
+
 
 /* ||||||| FOOTER ||||||| */
 footer {
-    width: 80%;
+    width: 1000%;
     height: auto;
     padding: 1rem 0 2rem 0;
 
@@ -230,6 +236,45 @@ footer {
     text-align: center;
     scroll-snap-align: center;
 }
+
+
+/* |||| BACKGROUND |||| */
+body::before {
+    content: '';
+    position: absolute;
+    transform: rotate(10deg);
+    top: 0%;
+
+    width: 100vw;
+    height: 200%;
+
+    background:var(--color-1)
+    linear-gradient(var(--color-1), var(--color-6));
+    border-radius: 1%;
+    opacity: 0.3;
+
+    z-index: -1;
+    overflow-y: hidden;
+}
+body::after {
+    content: '';
+    position: absolute;
+    transform: rotate(-10deg);
+    top: 180%;
+
+    width: 100vw;
+    height: 200%;
+
+    background:var(--color-1)
+    linear-gradient(var(--color-1), var(--color-7));
+    border-radius: 1%;
+    opacity: 0.3;
+
+    z-index: -2;
+    overflow-y: hidden;
+}
+
+
 
 /* |||| ANIMATIONS |||| */
 header:hover,
@@ -245,6 +290,11 @@ section:active {
     filter: brightness(110%);
     opacity: 1;
 }
+label:hover,
+label:active {
+    color: var(--color-1);
+}
+
 
 input:hover,
 input:focus,
@@ -260,7 +310,7 @@ input:active {
 
 textarea:hover,
 textarea:focus {
-    border: 2px solid var(--color-0);
+    border: 1px solid var(--color-0);
     background-color: var(--color-1);
     height: 8rem;
 }
@@ -269,5 +319,48 @@ textarea:focus {
 .button:focus {
     background-color: var(--color-1);
     color: var(--color-0);
+    border: 1px solid var(--color-0);
     cursor: pointer;
+}
+
+
+/* ||||||| MEDIA QUERIES ||||||| */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    header {
+        height: 15vh;
+        position: absolute;
+        top: 0%;
+    }
+    form {
+        margin-top: 20vh;
+    }
+    footer {
+        position: relative;
+        margin-top: -10vh;
+        bottom: 0;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+    body::after {
+        content:"600px and up";    
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
