@@ -1,10 +1,49 @@
+||  FCC REQUIREMENT:
 
-    Your tribute page should have a main element with a corresponding id of main, which contains all other elements
-    You should see an element with an id of title, which contains a string (i.e. text), that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug")
-    You should see either a figure or a div element with an id of img-div
-    Within the #img-div element, you should see an img element with a corresponding id="image"
-    Within the #img-div element, you should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in #img-div
-    You should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page
-    You should see an a element with a corresponding id="tribute-link", which links to an outside site, that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab
-    Your #image should use max-width and height properties to resize responsively, relative to the width of its parent element, without exceeding its original size
-    Your img element should be centered within its parent element
+        Your tribute page should have a main element with a corresponding id of main, which contains all other elements
+        You should see an element with an id of title, which contains a string (i.e. text), that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug")
+        You should see either a figure or a div element with an id of img-div
+        Within the #img-div element, you should see an img element with a corresponding id="image"
+        Within the #img-div element, you should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in #img-div
+        You should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page
+        You should see an a element with a corresponding id="tribute-link", which links to an outside site, that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab
+        Your #image should use max-width and height properties to resize responsively, relative to the width of its parent element, without exceeding its original size
+        Your img element should be centered within its parent element
+
+
+|| IMAGES TO CHOOSE :
+
+    For each section of your tribute page, you can use a variety of images that complement the content and evoke the essence of Chester Bennington's life and music. Here are some suggestions for the types of images you can use for each section:
+
+        Introduction:
+            Use a high-quality photo of Chester Bennington performing on stage to introduce the topic of your tribute page.
+            Alternatively, you could use an image of Linkin Park performing live to set the tone for the page.
+
+        Early Life:
+            Consider using childhood photos of Chester Bennington to illustrate his early life and struggles.
+            Images of Phoenix, Arizona, where he grew up, can also provide context.
+
+        Rise to Fame:
+            Use images from Linkin Park's early performances or concerts to showcase their rise to fame.
+            Album covers or promotional images from their debut album "Hybrid Theory" can also be suitable.
+
+        Musical Legacy:
+            Include images of Chester Bennington in various stages of his career, from music videos, album covers, or live performances.
+            Highlight the diversity of his musical legacy by including images of different eras of Linkin Park's music.
+
+        Impact and Influence:
+            Use images of Chester engaging with fans, participating in charity events, or advocating for mental health awareness.
+            Infographics or statistics related to his impact on mental health discussions can also be visually compelling.
+
+        Tragic Loss:
+            Consider using somber or reflective images to convey the solemnity of Chester's passing.
+            A black-and-white photo of Chester with a respectful tribute message can be appropriate.
+
+        Remembering Chester:
+            Use images that celebrate Chester's life, talent, and contributions to music.
+            Photos of memorial events, fan tributes, or artistic representations of Chester can be uplifting and comforting.
+
+        Footer:
+            You may include a simple image or icon representing peace, music, or remembrance to accompany the final message in the footer.
+
+    Ensure that the images you choose are respectful, relevant, and align with the overall tone and purpose of your tribute page. Also, verify that you have the appropriate permissions to use any copyrighted images.
