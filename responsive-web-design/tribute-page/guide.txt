@@ -47,3 +47,22 @@
             You may include a simple image or icon representing peace, music, or remembrance to accompany the final message in the footer.
 
     Ensure that the images you choose are respectful, relevant, and align with the overall tone and purpose of your tribute page. Also, verify that you have the appropriate permissions to use any copyrighted images.
+
+
+    image links : https://whathefan.com/wp-content/uploads/2018/01/chester-bennington-memorial-d7af207e-605d-41e1-a6e1-ab88f0140f3c.jpg
+
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...} 

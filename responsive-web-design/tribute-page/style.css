@@ -1,28 +1,111 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    /* || Color */
+    --primary-color: #0A0F0D;
+    --secondary-color: #FF934F;
+    --accent-color: #CABD77;
+    --light-color: #f7f7f7;
+
+    /* || Font */
+    --f-fam-title: Arvo, 'Open Sans', sans-serif;
+    --f-fam-subtitle: 'Protest Revolution', 'Open Sans', sans-serif;
+    --f-fam-content: 'Open Sans', sans-serif;
+    --f-size-small: 1.5rem;
+    --f-size-normal: 2rem;
+    --f-size-big: 2.5rem;
+    --f-size-biggest: 4rem;
+}
+
+
+/* || reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+
+
+html {
+    font-size: 62.5%;
 }
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: clamp(1.6rem, 2vh, 2rem);
+    font-family: var(--f-fam-content);
 }
-h1, h2 {
-    color: #333;
+
+main {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    display: flex;
+    flex-flow: column nowrap;
 }
-p {
-    line-height: 1.6;
-    color: #666;
-    text-align: justify;
+
+/* || Header block */
+.header__img {      /* || Image removed to keep the page flow */
+    position: absolute;
+    left: -100%;
 }
+
+.header {
+    min-height: 60rem;
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(tribute-header.jpg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+.header__title {
+    position: absolute;
+    bottom: 10%;
+    right:5%;
+    text-align: end;
+
+    font-size: clamp(4rem, 5vh, 6rem);
+    font-family: var(--f-fam-title);
+    color: var(--accent-color);
+    text-shadow: var(--primary-color) 0px 0px 5px,
+    var(--primary-color) 0px 0px 5px,
+    var(--primary-color) 0px 0px 5px;
+
+}
+
+.header__description {
+    position: absolute;
+    bottom: 5%;
+    right:5%;
+
+    color: transparent;
+    font-family: var(--f-fam-subtitle);
+    text-shadow: var(--light-color) 0px 0px 20px;
+    font-weight: 700;
+    background-image: linear-gradient(90deg,var(--accent-color) 60%,var(--light-color));
+    background-clip:text;
+}
+
+/* || article block */
+article {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+/* ||| section block */
