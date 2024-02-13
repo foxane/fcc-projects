@@ -11,25 +11,24 @@
     --accent-color-gradient: hsla(51, 44%, 63%, 0.39);
 
     /* || Font */
-    --f-fam-title: Arvo, 'Open Sans', sans-serif;
-    --f-fam-subtitle: 'Protest Revolution', 'Open Sans', sans-serif;
-    --f-fam-content: 'Open Sans', sans-serif;
-    --f-size-small: 1.5rem;
-    --f-size-normal: 2rem;
-    --f-size-big: 2.5rem;
-    --f-size-biggest: 4rem;
+
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html {
-    font-size: 62.5%; /* || 1rem = 10px */
+    font-size: 62.5%;
+    /* || 1rem = 10px */
 }
+
 body {
-    width: 100%;
-    font-size: clamp(1rem, 2vh, 3rem);
+    max-width: 100%;
+    min-height: 100%;
+    font-size: clamp(2rem, 2.5vh, 3rem);
     font-family: 'open Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.05ch;
@@ -37,82 +36,109 @@ body {
     background-color: var(--primary-color);
     color: var(--light-color);
 }
+
+h2 {
+    padding-bottom: 0.1em;
+    margin: 0 auto 0.2em auto;
+
+    font-size: clamp(2rem, 6vh, 6rem);
+    font-family: 'Arvo', 'Open Sans', sans-serif;
+    color: var(--accent-color);
+}
+
+/* || header block */
 .header {
     min-height: 100vh;
     width: 100%;
+    padding-bottom: 5em;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: center;
 
-    padding: 0 2rem 3rem 0;
-
-    background-image: linear-gradient(to top, rgba(10, 9, 9, 0.9) , var(--accent-color-gradient)),url(banner.png);
+    background-image: linear-gradient(to top, rgba(10, 9, 9, 0.9), var(--accent-color-gradient) 98%, var(--primary-color)), url(images/banner.png);
     background-position: 85% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .header * {
+    /* || Stacking header block */
     grid-area: 1;
 }
-.header__title {
-    margin-bottom: 1rem;
-    text-align: center;
 
+.header__title {
+    text-align: center;
+    padding-bottom: 0.1em;
 
     font-family: 'Protest Revolution', sans-serif;
-    font-size: clamp(2rem, 10vh, 6rem);
-    
+    font-size: clamp(2rem, 8vh, 20rem);
+
     color: transparent;
 
-    background:linear-gradient(to right bottom, var(--accent-color) 60%, var(--primary-color));
+    background: linear-gradient(to right bottom, var(--accent-color) 60%, var(--primary-color));
 
-    -webkit-background-clip: text; /* || clip on live preview doesn't work without this */
+    -webkit-background-clip: text;
+    /* || clip on live preview doesn't work without this */
     background-clip: text;
 }
-    
-.header__description {
-    margin-bottom : 4rem;
 
+.header__description {
     color: transparent;
     font-family: 'Protest Revolution', 'Open Sans', sans-serif;
     text-align: right;
+    font-size: clamp(2rem, 2vh, 4rem);
 
-    background:linear-gradient(to right, var(--accent-color)70%, var(--accent-color-gradient));
+    background: linear-gradient(to right, var(--accent-color)70%, var(--accent-color-gradient));
 
-    -webkit-background-clip: text; /* || clip on live preview doesn't work without this */
+    /* || background clip on live preview doesn't work without this */
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
+/* || subject block */
+
 .subject {
+    min-height: 100vh;
+    max-width: 100%;
+
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+
+    padding: 1em;
 
     text-align: center;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.705) 30%, rgba(36, 33, 3, 0.767)), url(images/background.jpeg) 60%;
 }
+.subject__figure {
 
-/* || Debug */
-.subject * {
-    border: 1px solid 
+}
+.subject__info {
+    padding: 3em 0;
+}
+.subject__description {
+    padding-bottom: 1em;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .subject__image {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    object-position: top;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    
     border-radius: 50%;
-    margin: 2rem auto 0 auto;
+    padding: 1em 0 0 0;
+    filter: grayscale();
 }
-.subject__info {
-    padding-top: 5rem;
-}
-.subject__name {
-    font-family: 'Arvo', 'Open Sans';
-    font-size: clamp(3rem, 2vh, 5rem);
-    color: var(--accent-color);
 
-    padding-bottom: 1rem;
-}
+
+
+
+
+
+
+
+
