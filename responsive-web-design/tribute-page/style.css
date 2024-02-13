@@ -57,7 +57,7 @@ h2 {
     justify-content: flex-end;
     align-items: center;
 
-    background-image: linear-gradient(to top, rgba(10, 9, 9, 0.9), var(--accent-color-gradient) 98%, var(--primary-color)), url(images/banner.png);
+    background-image: linear-gradient(to top, rgb(10, 9, 9), var(--accent-color-gradient) 98%, var(--primary-color)), url(images/banner.png);
     background-position: 85% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +111,7 @@ h2 {
     padding: 1em;
 
     text-align: center;
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.705) 30%, rgba(36, 33, 3, 0.767)), url(images/background.jpeg) 60%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.863) 30%, rgba(36, 33, 3, 0.767)), url(images/background.jpeg) 60%;
 }
 .subject__figure {
 
@@ -133,9 +133,6 @@ h2 {
     padding: 1em 0 0 0;
     filter: grayscale();
 }
-
-
-
 
 
 
