@@ -21,6 +21,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+img {
+    width: 80%;
+    height: auto;
+}
+
 
 html {
     font-size: 62.5%;
@@ -30,7 +35,7 @@ html {
 body {
     max-width: 100%;
     min-height: 100%;
-    font-size: clamp(2rem, 1vw + 1vh, 4rem);
+    font-size: clamp(1.5rem, 1vw + 1vh, 2rem);
     font-family: 'open Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.08ch;
@@ -121,13 +126,12 @@ h2::after {
 
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
+    place-content: space-between center;
 
     padding: 1em;
 
     text-align: center;
-    background: linear-gradient(to bottom right,#1a180ee1, var(--primary-color)), url(images/background.jpeg) 60%;
+    background: linear-gradient(to bottom,#141414e5, var(--primary-color)), url(images/background.jpeg) 60%;
 }
 
 .subject__header {
@@ -145,26 +149,44 @@ h2::after {
     max-width: 400px;
     height: auto;
     
-    border-radius: 10%;
-    padding: 0.5em;
-    background-color: var(--primary-color);
+    padding:5px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right,var(--primary-color), var(--accent-color));
 }
+/* || tribute block */
+.section {
+    background: linear-gradient(to top, var(--primary-color),#1a180ee1, var(--primary-color)), url(images/background.jpeg) 100%;
+}
+
 
 /* || section block */
 
-.section {
+/* DECIDED TO CHANGE APPROACH, MAKE THE .article grid element, we'll style it from there :) 
+    Set the abstract background to entire body. 
+    Or remove it altogather and use --primary as body background. 
+    Then set the countainer for .article to lighter color like grey (use color pallete generator).
+    After all that is done, THEN you set the grid layout.
+    Remember what you learn. Global first, layout later.
+    Global is typoghrapy, color, and everything that does ont affect positioning.
+    Godspeed my guy, I believe in you.
+                                        - Younger You <3
+ */
+
+/* || Value to use after everything specified above is done */
+
+/* .section {
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    flex-flow: column-reverse nowrap;
+    justify-content: space-around;
     text-align: center;
     row-gap: 2em;
 
-    min-height: 100vh;
-    max-width: 100%;
-    padding: 2rem 0.5em;
+    width: 100%;
 
     font-size: clamp(1.7rem, 1vw + 0.5vh, 3.5rem);
     line-height: 1.5em;
+
+    border-bottom: 2px solid var(--accent-color);
 }
 .section h2 {
     font-size: clamp(2rem, 2vh + 2vw, 6rem);
@@ -173,8 +195,7 @@ h2::after {
     font-size: clamp(1rem, 0.5vw + 0.5vh, 3rem);
     font-style: italic;
 }
-
-
+ */
 /* || divider */
 .custom-shape-divider-top-1707890958 {
     position: absolute;
