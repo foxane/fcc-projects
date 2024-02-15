@@ -36,7 +36,7 @@ html {
 body {
     max-width: 100%;
     min-height: 100%;
-    font-size: clamp(1.5rem, 1vw + 1vh, 1.9rem);
+    font-size: clamp(1.5rem, 1vw + 1vh, 1.7rem);
     font-family: 'open Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.08ch;
@@ -159,17 +159,37 @@ figcaption {
     border-radius: 5px;
     background: linear-gradient(to bottom right,var(--primary-color), var(--accent-color));
 }
-/* || tribute block */
+/* || tribute container */
+.article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 95%;
+}
+
+/* || section block */
+
 .section {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2rem;
+    max-width: 80rem;
+    
     background-color: var(--primary-color-2);
-    width: 80%;
+}
+.section__figure {
+    display: inherit;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 
-/* || section block */
-img {
-    width: 500px;
-    height: auto;
+.section * {
+    border: 1px solid
 }
 
 /* DECIDED TO CHANGE APPROACH, MAKE THE .article grid element, we'll style it from there :) 
