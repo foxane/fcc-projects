@@ -6,27 +6,22 @@
     /* || Color */
     --primary-color: #0A0F0D;
     --primary-color-2: hsl(60, 20%, 9%);
+    --primary-color-3: #434d0f;
     --secondary-color: #FF934F;
     --accent-color: #CABD77;
     --light-color: #f7f7f7;
     --accent-color-gradient: hsla(51, 44%, 63%, 0.39);
 
-    /* || Font */
-
+    /* || font*/
+    --font-size: clamp(1.2rem, 1vw + 1vh, 1.7rem);
 }
 
-
-
+/* || global properties */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-img {
-    width: 80%;
-    height: auto;
-}
-
 
 html {
     font-size: 62.5%;
@@ -36,11 +31,11 @@ html {
 body {
     max-width: 100%;
     min-height: 100%;
-    font-size: clamp(1.5rem, 1vw + 1vh, 1.7rem);
+    font-size: clamp(1.2rem, 1vw + 1vh, 1.7rem);
     font-family: 'open Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.08ch;
-    line-height: 3.5rem;
+    line-height: calc(var(--font-size) + 0.8em);
 
     background-color: var(--primary-color);
     color: var(--light-color);
@@ -48,19 +43,33 @@ body {
 
 h2 {
     position: relative;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.5em;
     margin: 0 auto 0.2em auto;
 
     font-size: clamp(2rem, 2vh + 3vw, 4rem);
     font-family: 'Arvo', 'Open Sans', sans-serif;
     color: var(--accent-color);
+
 }
+
 h2::before {
     content: '↼ ';
 }
+
 h2::after {
     content: ' ⇁';
 }
+
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+
+    padding: 5px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--accent-color));
+}
+
 
 .hightlight {
     color: var(--accent-color);
@@ -140,7 +149,7 @@ figcaption {
     padding: 1em;
 
     text-align: center;
-    background: linear-gradient(to bottom,#141414e5, var(--primary-color)), url(images/background.jpeg) 60%;
+    background: linear-gradient(to bottom, #141414e5, var(--primary-color)), url(images/background.jpeg) 60%;
 }
 
 
@@ -150,15 +159,6 @@ figcaption {
     border-bottom: 2px solid var(--accent-color);
 }
 
-.subject__image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    
-    padding:5px;
-    border-radius: 5px;
-    background: linear-gradient(to bottom right,var(--primary-color), var(--accent-color));
-}
 /* || tribute container */
 .article {
     display: flex;
@@ -166,6 +166,9 @@ figcaption {
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
+    margin: 0 auto;
+
+    text-align: center;
     width: 95%;
 }
 
@@ -174,23 +177,65 @@ figcaption {
 .section {
     display: flex;
     flex-flow: column-reverse wrap;
-    justify-content: space-between;
-    align-items: center;
     row-gap: 2rem;
     max-width: 80rem;
-    
+
+    padding: 1em;
+
+    border-radius: 0.2em;
+    border:1px solid var(--primary-color-3);
     background-color: var(--primary-color-2);
 }
+
 .section__figure {
-    display: inherit;
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 
-
-.section * {
-    border: 1px solid
+.section__image {
+    padding: 0;
+    border: 1px solid var(--accent-color)
 }
+
+.section__article {
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.section__figure {
+    padding-top: 1em;
+}
+
+/* || start of section with multiple picture */
+.section:nth-child(3) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 10px;
+}
+
+.section:nth-child(3) .section__figure {
+    order: 2;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+.section:nth-child(3) .section__image {
+    width: 40%;
+    height: auto;
+}
+
+
+/* || last picture positioning */
+.section:nth-child(3) .section__caption {
+    width: 100%;
+}
+/* || end of section with multiple picture */
 
 /* DECIDED TO CHANGE APPROACH, MAKE THE .article grid element, we'll style it from there :) 
     Set the abstract background to entire body. 
@@ -247,5 +292,3 @@ figcaption {
 .custom-shape-divider-top-1707890958 .shape-fill {
     fill: #030000;
 }
-
-
