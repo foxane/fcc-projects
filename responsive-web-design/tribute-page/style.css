@@ -10,6 +10,7 @@
     --secondary-color: #FF934F;
     --accent-color: #CABD77;
     --light-color: #f7f7f7;
+    --dark-color: #141313;
     --accent-color-gradient: hsla(51, 44%, 63%, 0.39);
 
     /* || font*/
@@ -31,6 +32,7 @@ html {
 body {
     max-width: 100%;
     min-height: 100%;
+
     font-size: clamp(1.2rem, 1vw + 1vh, 1.7rem);
     font-family: 'open Sans', sans-serif;
     font-weight: 600;
@@ -46,6 +48,9 @@ h2 {
     padding-bottom: 0.5em;
     margin: 0 auto 0.2em auto;
 
+    text-align: center;
+    text-indent: 0;
+
     font-size: clamp(2rem, 2vh + 3vw, 4rem);
     font-family: 'Arvo', 'Open Sans', sans-serif;
     color: var(--accent-color);
@@ -58,6 +63,10 @@ h2::before {
 
 h2::after {
     content: ' ⇁';
+}
+
+.blockquote__quote {
+    text-align: center;
 }
 
 img {
@@ -168,7 +177,7 @@ figcaption {
     gap: 2rem;
     margin: 0 auto;
 
-    text-align: center;
+    text-align: left;
     width: 95%;
 }
 
@@ -180,7 +189,7 @@ figcaption {
     row-gap: 2rem;
     max-width: 80rem;
 
-    padding: 1em;
+    padding: 2em 1.5em;
 
     border-radius: 0.2em;
     border:1px solid var(--primary-color-3);
@@ -195,7 +204,6 @@ figcaption {
 
 .section__image {
     padding: 0;
-    border: 1px solid var(--accent-color)
 }
 
 .section__article {
@@ -237,42 +245,57 @@ figcaption {
 }
 /* || end of section with multiple picture */
 
-/* DECIDED TO CHANGE APPROACH, MAKE THE .article grid element, we'll style it from there :) 
-    Set the abstract background to entire body. 
-    Or remove it altogather and use --primary as body background. 
-    Then set the countainer for .article to lighter color like grey (use color pallete generator).
-    After all that is done, THEN you set the grid layout.
-    Remember what you learn. Global first, layout later.
-    Global is typoghrapy, color, and everything that does ont affect positioning.
-    Godspeed my guy, I believe in you.
-                                        - Younger You <3
- */
-
-/* || Value to use after everything specified above is done */
-
-/* .section {
+blockquote {
     display: flex;
-    flex-flow: column-reverse nowrap;
+    flex-flow: column wrap;
     justify-content: space-around;
-    text-align: center;
-    row-gap: 2em;
 
-    width: 100%;
+    width: 80%;
+    max-width: 80rem;
+    min-height: 15rem;
+    padding: 1em;
 
-    font-size: clamp(1.7rem, 1vw + 0.5vh, 3.5rem);
-    line-height: 1.5em;
-
-    border-bottom: 2px solid var(--accent-color);
-}
-.section h2 {
-    font-size: clamp(2rem, 2vh + 2vw, 6rem);
-}
-.section__caption {
-    font-size: clamp(1rem, 0.5vw + 0.5vh, 3rem);
     font-style: italic;
+
+    background-color: var(--dark-color);
+    border: 1px solid var(--primary-color-3);
+    border-left: 0.5rem solid var(--accent-color);
+    border-radius: 2px;
 }
- */
-/* || divider */
+.blockquote__quote {
+    font-size: calc(var(--font-size) + 0.5em);
+}
+.links {
+    width: 85%;
+    max-width: 80rem;
+    margin : 3em auto;
+}
+.links__li {
+    list-style-position: inside;
+}
+a:any-link {
+    display: inline-block;
+    padding-left: -10px;
+    
+    text-decoration: none;
+    text-indent: 0;
+    line-height: normal;
+
+    color: var(--light-color);
+    background-image: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+    background-size: 100% 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-bottom: 0.1em solid var(--accent-color);
+
+    transition: all 0.25s;
+}
+a:hover,
+a:focus {
+    background-size: 100% 100%;
+    color: var(--primary-color);
+}
+
 .custom-shape-divider-top-1707890958 {
     position: absolute;
     top: 0;
