@@ -45,7 +45,6 @@ body {
 }
 
 h2 {
-    position: relative;
     padding-bottom: 0.5em;
     margin: 0 auto 0.2em auto;
 
@@ -180,6 +179,7 @@ figcaption {
 
     text-align: left;
     width: 95%;
+    max-width: 500px;
 }
 
 /* || section block */
@@ -204,6 +204,7 @@ figcaption {
 }
 
 .section__figure {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -222,6 +223,31 @@ figcaption {
     padding-top: 1em;
 }
 
+.play-icon {
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    left: 45%;
+
+    border-bottom: none;
+    color: var(--light-color);
+}
+.celebrate-life {
+    position: relative;
+    
+    background-image: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+    background-size: 100% 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: all 0.25s;
+}
+.celebrate-life:hover,
+.celebrate-life:hover>.play-icon,
+.celebrate-life:focus,
+.celebrate-life:focus>.play-icon {
+    background-size: 100% 5%;
+    color: var(--accent-color);
+}
 /* || start of section with multiple picture */
 .section:nth-child(4) {
     display: grid;
@@ -262,7 +288,7 @@ blockquote {
 
     width: 80%;
     max-width: 50rem;
-    min-height: 15rem;
+    min-height: 10rem;
     padding: 1em;
     margin: 1em 0;
 
@@ -284,21 +310,24 @@ blockquote {
     border-bottom: 1em solid var(--accent-color);
     background-color: var(--dark-color);
 }
-
 .links__container {
-    width: 80%;
-    max-width: 50rem;
+    width: fit-content;
     margin: 1em auto 0 auto;
     padding: 2em;
     text-indent: 1em;
-
+    text-align: left;
+}
+.links__ul {
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .links__li {
     list-style-position: inside;
+    text-align: left;
 }
 
-a:any-link {
+.links__link:any-link, .article__link:any-link {
     display: inline-block;
     padding-left: -10px;
 
@@ -316,12 +345,16 @@ a:any-link {
     transition: all 0.25s;
 }
 
-a:hover,
-a:focus {
+.links__link:hover,
+.links__link:focus,
+.article__link:hover,
+.article__link:focus {
     background-size: 100% 100%;
     color: var(--primary-color);
 }
 
+
+/* || media queries */
 @media (min-width: 800px) {
 
     .h2__mobile {
@@ -360,7 +393,7 @@ a:focus {
 
     /* || triubte container */
     .article {
-        max-width: 700px;
+        position: relative;
         display: grid;
         grid-template: repeat(6, auto) / repeat( 2, 1fr);
         grid-template-areas:
@@ -368,11 +401,13 @@ a:focus {
         "early  early"
         "rise music"
         "loss   loss"
-        "remem  remem"
-        "quote2 quote2";
+        "quote2 quote2"
+        "remem  remem";
         grid-column-gap: 0.5em;
-        grid-row-gap: 0.5em;
-
+        grid-row-gap: 3em;
+        
+        max-width: 500px;
+        margin-bottom: 2rem;
     }
     .section {
         flex-flow: column nowrap;
@@ -396,6 +431,7 @@ a:focus {
 
     /* || tribute layout */
     .quote1 {
+        position: sticky;
         grid-area: quote1;
         margin: auto;
     }
