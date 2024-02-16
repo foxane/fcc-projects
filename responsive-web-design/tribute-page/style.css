@@ -4,7 +4,7 @@
 
 :root {
     /* || Color */
-    --primary-color: #0A0F0D;
+    --primary-color: #000;
     --primary-color-2: hsl(60, 20%, 9%);
     --primary-color-3: #434d0f;
     --secondary-color: #FF934F;
@@ -65,6 +65,10 @@ h2::before {
 h2::after {
     content: ' ⇁';
 }
+
+.h2__dekstop {
+    display: none;
+} 
 
 .blockquote__quote {
     text-align: center;
@@ -341,6 +345,15 @@ a:focus {
 
 @media (min-width: 800px) {
 
+    .h2__mobile {
+        display: none;
+    }
+    .h2__dekstop {
+        display: block;
+        padding-bottom: 0;
+    }
+
+    /* || subject block */
     .subject {
         display: grid;
         flex-flow: row nowrap;
@@ -366,5 +379,71 @@ a:focus {
 
     .subject__description {
         flex-grow: 2;
+    }
+
+    /* || triubte container */
+    .article {
+        display: grid;
+        grid-template: repeat(6, auto) / repeat( 2, 1fr);
+        grid-template-areas:
+        "quote1 quote1"
+        "early  early"
+        "rise music"
+        "loss   loss"
+        "remem  remem"
+        "quote2 quote2";
+        grid-column-gap: 0.5em;
+        grid-row-gap: 0.5em;
+    }
+    .section {
+        flex-flow: column nowrap;
+    }
+    .section__early__article {
+        width: 65%;
+        border: none;
+    }
+    .rise .section__article,
+    .music .section__article,
+    .loss .section__article {
+        border: none;
+    }
+    .loss .section__article {
+        width: 65%;
+    }
+
+    /* || tribute layout */
+    .quote1 {
+        grid-area: quote1;
+        margin: auto;
+    }
+    .early {
+        grid-area: early;
+        flex-flow: row-reverse nowrap;
+        column-gap: 1em;
+        border-bottom: 1px solid var(--accent-color);
+    }
+    .rise {
+        height: 100%;
+        grid-area: rise;
+    }
+    .music {
+        grid-area: music;
+    }
+    .loss {
+        grid-area: loss;
+        flex-flow: row;
+        column-gap: 1em;
+        border-bottom: 1px solid var(--accent-color);
+    }
+    .remem {
+        grid-area: remem;
+    }
+    .remem>.section__figure .section__image {
+        width: 150%;
+        height: auto;
+    }
+    .quote2 {
+        grid-area: quote2;
+        margin: 0 auto
     }
 }
