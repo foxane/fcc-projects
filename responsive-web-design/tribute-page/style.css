@@ -26,6 +26,7 @@
 
 html {
     font-size: 62.5%;
+    height: auto;
     /* || 1rem = 10px */
 }
 
@@ -246,6 +247,7 @@ figcaption {
     padding-top: 1em;
     text-align: center;
 }
+
 /* || end of section with multiple picture */
 
 blockquote {
@@ -254,7 +256,7 @@ blockquote {
     justify-content: space-around;
 
     width: 80%;
-    max-width: 80rem;
+    max-width: 50rem;
     min-height: 15rem;
     padding: 1em;
     margin: 1em 0;
@@ -265,22 +267,36 @@ blockquote {
     border-left: 0.5rem solid var(--accent-color);
     border-radius: 2px;
 }
+
 .blockquote__quote {
     font-size: calc(var(--font-size) + 0.5em);
     font-weight: bolder;
 }
+
+/* || links block */
 .links {
-    width: 85%;
-    max-width: 80rem;
-    margin : 3em auto;
+    width: 100%;
+    border-bottom: 1em solid var(--accent-color);
+    background-color: var(--dark-color);
 }
+
+.links__container {
+    width: 80%;
+    max-width: 50rem;
+    margin: 1em auto 0 auto;
+    padding: 2em;
+    text-indent: 1em;
+
+}
+
 .links__li {
     list-style-position: inside;
 }
+
 a:any-link {
     display: inline-block;
     padding-left: -10px;
-    
+
     text-decoration: none;
     text-indent: 0;
     line-height: normal;
@@ -294,12 +310,15 @@ a:any-link {
 
     transition: all 0.25s;
 }
+
 a:hover,
 a:focus {
     background-size: 100% 100%;
     color: var(--primary-color);
 }
 
+
+/* || Curve divider */
 .custom-shape-divider-top-1707890958 {
     position: absolute;
     top: 0;
@@ -321,28 +340,30 @@ a:focus {
 }
 
 @media (min-width: 800px) {
-    
+
     .subject {
         display: grid;
         flex-flow: row nowrap;
 
         min-height: 1px;
-        
+
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
 
         align-items: center;
     }
 
-.subject h2 {
-    display: none;
-}
+    .subject h2 {
+        display: none;
+    }
+
     .subject__image {
         flex-grow: 1;
 
         width: 80%;
         height: 80%;
     }
+
     .subject__description {
         flex-grow: 2;
     }
