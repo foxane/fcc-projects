@@ -14,7 +14,7 @@
     --accent-color-gradient: hsla(51, 44%, 63%, 0.39);
 
     /* || font*/
-    --font-size: clamp(1.2rem, 1vw + 1vh, 1.7rem);
+    --font-size: clamp(0.5rem, 1vw + 1vh, 0.8rem);
 }
 
 /* || global properties */
@@ -34,7 +34,7 @@ body {
     max-width: 100%;
     min-height: 100%;
 
-    font-size: clamp(1.2rem, 1vw + 1vh, 1rem);
+    font-size: var(--font-size);
     font-family: 'open Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.08ch;
@@ -52,38 +52,32 @@ h2 {
     text-align: center;
     text-indent: 0;
 
-    font-size: clamp(2rem, 2vh + 3vw, 2.5rem);
+    font-size: calc(var(--font-size) + 1em);
     font-family: 'Arvo', 'Open Sans', sans-serif;
     color: var(--accent-color);
 
 }
 
-h2::before {
-    content: '↼ ';
-}
-
-h2::after {
-    content: ' ⇁';
-}
-
 .h2__dekstop {
     display: none;
 } 
-
-.blockquote__quote {
-    text-align: center;
+p {
+    text-indent: 1em;
 }
 
 img {
     width: 100%;
-    max-width: 400px;
+    max-width: 200px;
     height: auto;
-
-    padding: 5px;
+    
+    padding: 1em;
     border-radius: 5px;
     background: linear-gradient(to bottom right, var(--primary-color), var(--accent-color));
 }
 
+.blockquote__quote {
+    text-align: center;
+}
 
 .hightlight {
     color: var(--accent-color);
@@ -93,7 +87,7 @@ img {
 figcaption {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: calc(var(--font-size) - 0.1em);
     font-style: italic;
 }
 
@@ -153,8 +147,9 @@ figcaption {
 
 .subject {
     min-height: 100vh;
-    max-width: 100%;
+    max-width: 600px;
     position: relative;
+    margin: 1em auto;
 
     display: flex;
     flex-flow: column;
@@ -163,7 +158,6 @@ figcaption {
     padding: 1em;
 
     text-align: center;
-    background: linear-gradient(to bottom, var(--primary-color-2), var(--primary-color));
 }
 
 
@@ -201,6 +195,13 @@ figcaption {
     border-radius: 0.2em;
     background-color: var(--dark-color);
 }
+/* | last section layout fix */
+.remem {
+    flex-flow: column;
+}
+.remem>.section__figure .section__image {
+    max-width: none;
+}
 
 .section__figure {
     display: flex;
@@ -209,7 +210,7 @@ figcaption {
 }
 
 .section__image {
-    padding: 0;
+    background: none;
 }
 
 .section__article {
@@ -321,28 +322,6 @@ a:focus {
     color: var(--primary-color);
 }
 
-
-/* || Curve divider */
-.custom-shape-divider-top-1707890958 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1707890958 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 41px;
-}
-
-.custom-shape-divider-top-1707890958 .shape-fill {
-    fill: #030000;
-}
-
 @media (min-width: 800px) {
 
     .h2__mobile {
@@ -357,6 +336,7 @@ a:focus {
     .subject {
         display: grid;
         flex-flow: row nowrap;
+        align-items: center;
 
         min-height: 1px;
 
@@ -366,9 +346,6 @@ a:focus {
         align-items: center;
     }
 
-    .subject h2 {
-        display: none;
-    }
 
     .subject__image {
         flex-grow: 1;
@@ -383,6 +360,7 @@ a:focus {
 
     /* || triubte container */
     .article {
+        max-width: 700px;
         display: grid;
         grid-template: repeat(6, auto) / repeat( 2, 1fr);
         grid-template-areas:
@@ -394,17 +372,22 @@ a:focus {
         "quote2 quote2";
         grid-column-gap: 0.5em;
         grid-row-gap: 0.5em;
+
     }
     .section {
         flex-flow: column nowrap;
+        margin: 0 auto;
+        align-items: center;
     }
     .section__early__article {
         width: 65%;
         border: none;
+        align-items: center;
     }
     .rise .section__article,
     .music .section__article,
-    .loss .section__article {
+    .loss .section__article,
+    .remem .section__article {
         border: none;
     }
     .loss .section__article {
@@ -420,26 +403,29 @@ a:focus {
         grid-area: early;
         flex-flow: row-reverse nowrap;
         column-gap: 1em;
-        border-bottom: 1px solid var(--accent-color);
     }
     .rise {
         height: 100%;
         grid-area: rise;
     }
     .music {
+        height: 100%;
         grid-area: music;
     }
     .loss {
         grid-area: loss;
         flex-flow: row;
         column-gap: 1em;
-        border-bottom: 1px solid var(--accent-color);
     }
     .remem {
         grid-area: remem;
+        flex-flow: column;
     }
     .remem>.section__figure .section__image {
-        width: 150%;
+
+        object-fit: cover;
+        max-width: none;
+        width: 100%;
         height: auto;
     }
     .quote2 {
