@@ -102,7 +102,7 @@ figcaption {
     justify-content: flex-end;
     align-items: center;
 
-    background-image: linear-gradient(to top, rgb(10, 9, 9), var(--accent-color-gradient) 98%, var(--primary-color)), url(images/banner.png);
+    background-image: linear-gradient(to top, rgb(10, 9, 9), var(--accent-color-gradient) 98%, var(--primary-color)), url(https://i.imghippo.com/files/vGZAx1708148697.png);
     background-position: 85% 50%;
     background-repeat: no-repeat;
     background-size: cover;
