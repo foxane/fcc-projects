@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+    <!-- ||| Add colors to code snippet 1/2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 </head>
 <body>
     <header>
@@ -12,7 +15,7 @@
             <header>Responsive Web Design</header>
             <ul>
                 <li><a class="nav-link" href="#introduction">Introduction</a></li>
-                <li><a class="nav-link" href="#media-queries">Media Queries</a></li>
+                <li><a class="nav-link" href="#media-query">Media Queries</a></li>
                 <li><a class="nav-link" href="#layouts">Layouts</a></li>
                 <li><a class="nav-link" href="#images">Images</a></li>
                 <li><a class="nav-link" href="#typhography">Typhography</a></li>
@@ -26,23 +29,47 @@
         <section id="introduction" class="section main-section">
             <header>Introduction</header>
             <article class="section__article">
+                <p>Responsive web design is an approach to make web pages render well on variety of devices.</p>
                 <p>Before you write your first CSS line, HTML are responsive by default. It may not look good, but it is<em>responsive</em>. So, when you styling your page, and suddenly something broke, know that it is your fault. But don't worry, I am here to help you not wasting time scracthing your head. At least not as much as me.</p>
                 <p>The rest of this page will show what's on your arsenal that you might not know.</p>
             </article>
         </section>
 
-        <section id="introduction" class="section main-section"> <!-- |||  NEED AT LEAST 5 SECTIONS TOTAL -->
+        <section id="media-query" class="section main-section">
+            <header>Media Query</header>
+            <article class="section__article">
+                <p>Media queries enable you to apply CSS styles based on a device's media type (e.g., print or screen) or its various attributes, including screen resolution, orientation, aspect ratio, browser viewport width or height, and user preferences like preferring reduced motion, data usage, or transparency.</p>
+                <p>Below example will apply <span class="term">color: red;</span> into <span class="term">.container</span> when the screen width are <span class="term">600px</span> or above.</p>
+                <pre>
+                    <code>
+                        @media (min-width: 600px) {
+                            .container {
+                                color: red;
+                            }
+                        }
+                    </code>
+                </pre>
+                <p>In your stylesheet, you can include different media queries to adjust your layout or parts of it for various screen sizes. These adjustments happen at specific points called breakpoints.</p>
+                <p>Use your breakpoints when the page start to look bad at certain screen width.</p>
+            </article>
+        </section>
+
+        <section id="introduction" class="section main-section">
             <header>Introduction</header>
             <article class="section__article">
-                <p>lorem</p>        <!-- ||| NEED AT LEAST 10 PARAGRAPH TOTAL -->
-                <code>ipsum</code>  <!-- ||| NEEED AT LEAST 5 CODE TOTAL (FOR THE ENTIRE PAGE) -->
+                <p>lorem</p>        
+                <code>ipsum</code>
                 <ul>
-                    <li>dolor</li>  <!-- ||| NEED AT LEAST 5 LIST ITEMS TOTAL -->
-                    <li>sit</li>    <!-- ||| NEED AT LEAST 5 LIST ITEMS TOTAL -->
+                    <li>dolor</li>
+                    <li>sit</li>  
                 </ul>
             </article>
         </section>
 
     </main>
+
+    <!-- ||| Add colors to code snippet 2/2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>
