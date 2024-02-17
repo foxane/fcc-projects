@@ -456,6 +456,7 @@ blockquote {
     .remem {
         grid-area: remem;
         flex-flow: column;
+        row-gap: 1em;
     }
     .remem>.section__figure .section__image {
 
