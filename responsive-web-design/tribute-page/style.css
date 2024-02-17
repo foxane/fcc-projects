@@ -14,7 +14,7 @@
     --accent-color-gradient: hsla(51, 44%, 63%, 0.39);
 
     /* || font*/
-    --font-size: clamp(0.5rem, 1vw + 1vh, 0.8rem);
+    --font-size: clamp(1rem, 1vw + 1vh, 2.5rem);
 }
 
 /* || global properties */
@@ -66,7 +66,6 @@ p {
 
 img {
     width: 100%;
-    max-width: 200px;
     height: auto;
     
     padding: 1em;
@@ -146,7 +145,6 @@ figcaption {
 
 .subject {
     min-height: 100vh;
-    max-width: 600px;
     position: relative;
     margin: 1em auto;
 
@@ -188,7 +186,6 @@ figcaption {
     display: flex;
     flex-flow: column-reverse wrap;
     row-gap: 2rem;
-    max-width: 80rem;
 
     padding: 2em 1.5em;
 
@@ -198,9 +195,6 @@ figcaption {
 /* | last section layout fix */
 .remem {
     flex-flow: column;
-}
-.remem>.section__figure .section__image {
-    max-width: none;
 }
 
 .section__figure {
@@ -287,7 +281,7 @@ blockquote {
     justify-content: space-around;
 
     width: 80%;
-    max-width: 50rem;
+    max-width: 100rem;
     min-height: 10rem;
     padding: 1em;
     margin: 1em 0;
@@ -372,6 +366,7 @@ blockquote {
         align-items: center;
 
         min-height: 1px;
+        max-width: 200rem;
 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -406,8 +401,9 @@ blockquote {
         grid-column-gap: 0.5em;
         grid-row-gap: 3em;
         
-        max-width: 500px;
-        margin-bottom: 2rem;
+        width: 80%;
+        max-width: 2000px;
+        margin-bottom: 3em;
     }
     .section {
         flex-flow: column nowrap;
@@ -461,7 +457,6 @@ blockquote {
     .remem>.section__figure .section__image {
 
         object-fit: cover;
-        max-width: none;
         width: 100%;
         height: auto;
     }
