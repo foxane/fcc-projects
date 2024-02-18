@@ -47,6 +47,7 @@ img {
     max-width: 100%;
 }
 h1{
+    padding-bottom: 1.6rem;
     font-size: calc(var(--font-size) + 2rem);
 }
 .section__article>h3 {
@@ -58,11 +59,7 @@ h1{
 /* || Header Block */
 .header {
     width: 100%;
-    padding: 3rem 1rem 2rem 1rem;
-}
-
-.header__title {
-    text-align: center;
+    padding: 3rem 0;
 }
 .navbar { /* note : navbar will be visible at 769px screen width */
     display: none;
@@ -96,7 +93,7 @@ h1{
     flex-flow: column nowrap;
 }
 p, code, img {
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -105,7 +102,10 @@ p, code, img {
     text-decoration: none;
 }
 
+/* || Code Block */
+
 code {
+    border: 5px solid var(--clr-accent);
     white-space: pre-line;
 }
 
