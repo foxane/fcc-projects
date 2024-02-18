@@ -1,22 +1,12 @@
-@media (max-width: 800) {
-    /* || mobile view */
+:root {
+    /* ||Colors */
 }
-
-.section:active,
-.section:hover,
-.section:focus {
-    background-color: aliceblue;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-img {
-    max-width: 100%;
-}
-.term {
-    background-color: #ddd;
-    border: 1px solid black;
-    border-radius: 4px;
-    font-family: monospace;
-}
-.highlight {
-    font-weight: bold;
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    
 }
