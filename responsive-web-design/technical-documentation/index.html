@@ -19,8 +19,9 @@
                 <li><a class="nav-link" href="#layouts">Responsive Layouts</a></li>
                 <li><a class="nav-link" href="#images">Images</a></li>
                 <li><a class="nav-link" href="#typhography">Typhography</a></li>
-                <li><a class="nav-link" href="#viewport">Viewport tag</a></li>
+                <li><a class="nav-link" href="#viewport">Viewport meta tag</a></li>
                 <li><a class="nav-link" href="#summary">Summary</a></li>
+                <li><a class="nav-link" href="#reference">References</a></li>
             </ul>
         </nav>
     </header>
@@ -116,7 +117,7 @@
             
             <article class="section__article">
                 <h3>Using media queries for responsive typography</h3>
-                <p>In this example, we want to set our level 1 heading to be <span class="term">4rem</span>, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least <span class="term">1200px.</span></p>
+                <p>In this example, we want to set our level 1 heading to be <span class="term">4rem</span>, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least <span class="term">1200px</span>.</p>
                 <pre>
                     <code>
                         html {
@@ -153,17 +154,50 @@
                 </pre>
                 <p>The problem with doing the above is that the user loses the ability to zoom any text set using the vw unit, as that text is always related to the size of the viewport. <span class="highlight">Therefore you should never set text using viewport units alone.</span></p>
                 <p>There is a solution, and it involves using <span class="term">calc()</span>. If you add the <span class="term">vw</span> unit to a value set using a fixed size such as <span class="term">em</span>s or <span class="term">rem</span>s then the text will still be zoomable. Essentially, the <span class="term">vw</span> unit adds on top of that zoomed value:</p>
+                <pre>
+                    <code>
+                        h1 {
+                            font-size: calc(1.5rem + 3vw);
+                          }
+                    </code>
+                </pre>
+                <p>This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually increases as you increase the size of the viewport.</p>
             </article>
         </section>
 
-        <section id="introduction" class="section main-section">
-            <header>Introduction</header>
+        <section id="viewport" class="section main-section">
+            <header>Viewport meta tag</header>
             <article class="section__article">
-                <p>lorem</p>        
-                <code>ipsum</code>
+                <p>If you look at the HTML source of a responsive page, you will usually see the following <span class="term">&lt;meta&gt;</span> tag in the <span class="term">&lt;head&gt;</span> of the document.</p>
+                <pre>
+                    <code>
+                        &lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt
+                    </code>
+                </pre>
+                <p>This viewport meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.</p>
+                <p>Why is this needed? Because mobile browsers tend to lie about their viewport width.</p>
+                <p>This meta tag exists because when smartphones first arrived, most sites were not mobile optimized. The mobile browser would, therefore, set the viewport width to 980 pixels, render the page at that width, and show the result as a zoomed-out version of the desktop layout. Users could zoom in and pan around the website to view the bits they were interested in, but it looked bad.</p>
+                <p>By setting <span class="term">width=device-width</span> you are overriding a mobile device's default, like Apple's default <span class="term">width=980px</span>, with the actual width of the device. Without it, your responsive design with breakpoints and media queries may not work as intended on mobile browsers. If you've got a narrow screen layout that kicks in at 480px viewport width or less, but the device is saying it is 980px wide, that user will not see your narrow screen layout.</p>
+                <p><span class="highlight">So you should <em>always</em> include the viewport meta tag in the head of your documents.</span></p>
+            </article>
+        </section>
+
+        <section id="summary" class="section main-section">
+            <header>Summary</header>
+            <article class="section__article">
+                <p>Responsive design refers to a site or application design that responds to the environment in which it is viewed. It encompasses a number of CSS and HTML features and techniques and is now essentially just how we build websites by default. Consider the sites that you visit on your phone — it is probably fairly unusual to come across a site that is the desktop version scaled down, or where you need to scroll sideways to find things. This is because the web has moved to this approach of designing responsively.</p>
+                <p>It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are using. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.</p>
+
+            </article>
+        </section>
+
+        <section id="reference" class="section main-section">
+            <header>References</header>
+            <article class="section__article">
+                <p>The content on this page was taken from:</p>
                 <ul>
-                    <li>dolor</li>
-                    <li>sit</li>  
+                    <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">MDN Docs</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
                 </ul>
             </article>
         </section>
