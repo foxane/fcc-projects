@@ -1,7 +1,9 @@
 :root {
     /* || Colors */
     --clr-dark: black;
+    --clr-secondary:rgb(48, 47, 47);
     --clr-primary: rgb(32, 32, 32);
+    --clr-light: grey;
     --clr-accent: #251351;
     /* || Fonts */
     --font-size: clamp(1.6rem, 2vh, 1.8rem)
@@ -105,10 +107,28 @@ p, code, img {
 /* || Code Block */
 
 code {
-    border: 5px solid var(--clr-accent);
+    position: relative;
+    padding-bottom: 3rem;
+
+    background-color: var(--clr-secondary);
+    border: 0.1rem solid var(--clr-light);
+    border-top: 3.5rem solid var(--clr-light);
+    border-radius: 0.5rem;
+
     white-space: pre-line;
+}
+code::before {
+    content: "css";
+    position: absolute;
+    top:-3.2rem;
+    left: 2rem;
+}
+.html::before {
+    content: "html";
 }
 
 code > .indent {
+    padding-left: 5rem;
+
     white-space: pre-wrap;
 }
