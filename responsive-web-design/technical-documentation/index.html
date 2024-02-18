@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <header>
-        <h1>Responsive Web Design</h1>
+    <header class="header">
+        <h1 class="header__title">Responsive Web Design</h1>
         <nav id="navbar" class="navbar"> <!-- ||| NAVBAR SHOULD BE ON THE LEFT EDGE OF SCREEN FOR DEKSTOPS -->
-            <header>Table of content</header>
+            <header class="navbar__title">Table of content :</header>
             <ul>
                 <li><a class="nav-link" href="#Introduction">Introduction</a></li>
                 <li><a class="nav-link" href="#Media_Query">Media Query</a></li>
@@ -27,7 +27,7 @@
         </nav>
     </header>
     <main id="main-doc">
-
+        <p>Responsive web design (RWD) is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. It is the way to design for a multi-device web. In this article, we'll help you understand some techniques that can be used to master it.</p>
         <section id="Introduction" class="section main-section">
             <header class="section__header">Introduction</header>
             <article class="section__article">
@@ -50,7 +50,7 @@
                 <p>Below example will apply <span class="term">color: red;</span> into <span
                         class="term">.container</span> when the screen width are <span class="term">600px</span> or
                     above.</p>
-                <pre>
+                
                     <code>
                         <span class="indent">@media (min-width: 600px) {</span>
                         <span class="indent">   .container {</span>
@@ -58,7 +58,7 @@
                         <span class="indent">   }</span>
                         <span class="indent">}</span>
                     </code>
-                </pre>
+                
                 <p>In your stylesheet, you can include different media queries to adjust your layout or parts of it for
                     various screen sizes. These adjustments happen at specific points called breakpoints.</p>
                 <p>Use your breakpoints when the page start to look bad at certain screen width.</p>
@@ -76,7 +76,7 @@
                     encounter more or less space around them.</p>
                 <p>In the example below the flex items will each take an equal amount of space in the flex container,
                     using the shorthand of <span class="term">flex: 1</span></p>
-                <pre>
+                
                     <code>
                         <span class="indent">.container {</span>
                         <span class="indent">   display: flex;</span>
@@ -86,7 +86,7 @@
                         <span class="indent">   flex: 1;</span>
                         <span class="indent">}</span>
                     </code>
-                </pre>
+                
             </article>
 
             <article>
@@ -94,14 +94,14 @@
                 <p>In CSS Grid Layout the fr unit allows the distribution of available space across grid tracks. The
                     next example creates a grid container with three tracks sized at 1fr. This will create three column
                     tracks, each taking one part of the available space in the container.</p>
-                <pre>
+                
                     <code>
                         <span class="indent">.container {</span>
                         <span class="indent">   display: grid;</span>
                         <span class="indent">   grid-template-columns: 1fr 1fr 1fr;</span>
                         <span class="indent">}</span>                                                  
                     </code>
-                </pre>
+                
             </article>
         </section>
 
@@ -110,14 +110,14 @@
             <article class="section__article">
                 <p>To ensure media is never larger than its responsive container, the following approach can be used:
                 </p>
-                <pre>
+                
                     <code>
                         <span class="indent">img,</span>
                         <span class="indent">video {</span>
                         <span class="indent">        max-width: 100%;</span>
                         <span class="indent">}</span>
                     </code>
-                </pre>
+                
                 <p>This scales media to ensure they never overflow their containers. Using a single large image and
                     scaling it down to fit small devices wastes bandwidth by downloading images larger than what is
                     needed.</p>
@@ -147,7 +147,7 @@
                     heading on larger screen sizes, therefore we first create a smaller heading then use media queries
                     to overwrite it with the larger size if we know that the user has a screen size of at least <span
                         class="term">1200px</span>.</p>
-                <pre>
+                
                     <code>
                         <span class="indent">html {</span>
                         <span class="indent">   font-size: 1em;</span>
@@ -163,7 +163,7 @@
                         <span class="indent">   }</span>
                         <span class="indent">}</span>                          
                     </code>
-                </pre>
+                
                 <p>On mobile the heading is smaller:</p>
                 <img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design/mdn-rwd-font-mobile.png"
                     alt="page mobile view">
@@ -181,13 +181,13 @@
                     the need for setting breakpoints with media queries. <span class="term">1vw</span> is equal to one
                     percent of the viewport width, meaning that if you set your font size using <span
                         class="term">vw</span>, it will always relate to the size of the viewport.</P>
-                <pre>
+                
                     <code>
                         <span class="indent">h1 {</span>
                         <span class="indent">   font-size: 6vw;</span>
                         <span class="indent">}</span>
                     </code>
-                </pre>
+                
                 <p>The problem with doing the above is that the user loses the ability to zoom any text set using the vw
                     unit, as that text is always related to the size of the viewport. <span class="highlight">Therefore
                         you should never set text using viewport units alone.</span></p>
@@ -195,13 +195,13 @@
                         class="term">vw</span> unit to a value set using a fixed size such as <span
                         class="term">em</span>s or <span class="term">rem</span>s then the text will still be zoomable.
                     Essentially, the <span class="term">vw</span> unit adds on top of that zoomed value:</p>
-                <pre>
+                
                     <code>
                         <span class="indent">h1 {</span>
                         <span class="indent">   font-size: calc(1.5rem + 3vw);</span>
                         <span class="indent">}</span>
                     </code>
-                </pre>
+                
                 <p>This means that we only need to specify the font size for the heading once, rather than set it up for
                     mobile and redefine it in the media queries. The font then gradually increases as you increase the
                     size of the viewport.</p>
@@ -214,11 +214,9 @@
                 <p>If you look at the HTML source of a responsive page, you will usually see the following <span
                         class="term">&lt;meta&gt;</span> tag in the <span class="term">&lt;head&gt;</span> of the
                     document.</p>
-                <pre>
                     <code>
                         <span class="indent">&lt;meta name="viewport" content="width=device-width,initial-scale=1"/&gt</span>
                     </code>
-                </pre>
                 <p>This viewport meta tag tells mobile browsers that they should set the width of the viewport to the
                     device width, and scale the document to 100% of its intended size, which shows the document at the
                     mobile-optimized size that you intended.</p>
