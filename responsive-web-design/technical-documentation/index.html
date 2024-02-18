@@ -16,7 +16,7 @@
             <ul>
                 <li><a class="nav-link" href="#introduction">Introduction</a></li>
                 <li><a class="nav-link" href="#media-query">Media Queries</a></li>
-                <li><a class="nav-link" href="#layouts">Layouts</a></li>
+                <li><a class="nav-link" href="#layouts">Responsive Layouts</a></li>
                 <li><a class="nav-link" href="#images">Images</a></li>
                 <li><a class="nav-link" href="#typhography">Typhography</a></li>
                 <li><a class="nav-link" href="#viewport">Viewport tag</a></li>
@@ -51,6 +51,62 @@
                 </pre>
                 <p>In your stylesheet, you can include different media queries to adjust your layout or parts of it for various screen sizes. These adjustments happen at specific points called breakpoints.</p>
                 <p>Use your breakpoints when the page start to look bad at certain screen width.</p>
+            </article>
+        </section>
+
+        <section id="layout" class="section main-section">
+            <header>Responsive Layouts</header>
+
+            <article class="section__article">
+                <h3>Flexbox</h3>
+                <p>In Flexbox, flex items shrink or grow, distributing space between the items according to the space in their container. By changing the values for <span class="term">flex-grow</span> and <span class="term">flex-shrink</span> you can indicate how you want the items to behave when they encounter more or less space around them.</p>
+                <p>In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of <span class="term">flex: 1</span></p>
+                <pre>
+                    <code>
+                        .container {
+                            display: flex;
+                          }
+                          
+                          .item {
+                            flex: 1;
+                          }                          
+                    </code>
+                </pre>
+            </article>
+
+            <article>
+                <h3>Grid</h3>
+                <p>In CSS Grid Layout the fr unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at 1fr. This will create three column tracks, each taking one part of the available space in the container.</p>
+                <pre>
+                    <code>
+                        .container {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                          }                                                  
+                    </code>
+                </pre>
+            </article>
+        </section>
+
+        <section id="images" class="section main-section">
+            <header>Responsive Images and Media</header>
+            <article class="section__article">
+                <p>To ensure media is never larger than its responsive container, the following approach can be used:</p>
+                <pre>
+                    <code>
+                        img,
+                        video {
+                        max-width: 100%;
+                        }                                    
+                    </code>
+                </pre>
+                <p>This scales media to ensure they never overflow their containers. Using a single large image and scaling it down to fit small devices wastes bandwidth by downloading images larger than what is needed.</p>
+                <p>Other useful tips:</p>
+                <ul>
+                    <li>Always make sure to use an appropriate image format for your website images (such as PNG or JPG), and make sure to optimize the file size using a graphics editor before you put them on your website.</li>
+                    <li>You can make use of CSS features like gradients and shadows to implement visual effects without using images.</li>
+                    <li>You can use media queries inside the media attribute on <span class="term">&lt;source&gt;</span> elements nested inside <span class="term">&lt;video&gt;</span>/<span class="term">&lt;audio&gt;</span> elements to serve video/audio files as appropriate for different devices (responsive video/audio).</li>
+                </ul>
             </article>
         </section>
 
