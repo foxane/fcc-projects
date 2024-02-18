@@ -4,7 +4,7 @@
     --clr-primary: #040926;
     --clr-accent: #251351;
     /* || Fonts */
-    --font-size: clamp(1.6rem, 2vh, 2rem)
+    --font-size: clamp(1.6rem, 2vh, 1.8rem)
 }
 
 /* || Global */
@@ -26,8 +26,18 @@ body {
     color: white;
     font-family: Helvetica, Arial, sans-serif;
     font-size: var(--font-size);
-    line-height: calc(var);
+    line-height: calc(var(--font-size) + 50%);
 }
+
+
+/* || to be applied later, need additional top padding for header block */
+/* body::before {   
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1rem;
+    background-color: var(--clr-accent);
+} */
 
 ul {
     padding-inline-start: 4em;
@@ -37,18 +47,19 @@ img {
     max-width: 100%;
 }
 h1{
-    font-size: calc(var(--font-size) + 1.3rem);
+    font-size: calc(var(--font-size) + 2rem);
 }
 h3 {
-    font-size: calc(var(--font-size) + 0.1rem);
+    font-size: calc(var(--font-size) + 0.6rem);
     font-weight: bold;
 }
 
 /* || Header Block */
 .header {
     width: 100%;
-    padding: 1em;
+    padding: 3em 1em 2em 1em;
 }
+
 .header__title {
     text-align: center;
 }
@@ -56,12 +67,34 @@ h3 {
     display: none;
 }
 
+/* || Main Block */
+.main-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+/* || Section Block */
 
+.section {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 1.5em;
+}
 .section__header {
-    font-size: calc(var(--font-size) + 0.5rem);
+    font-size: calc(var(--font-size) + 1.2rem);
     font-weight: bold;
 }
+.section__article {
+    display: inherit;
+    flex-flow: column nowrap;
+}
+.section>p {
+
+}
+
 
 .nav-link:any-link {
     color: white;
