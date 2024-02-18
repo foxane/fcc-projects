@@ -1,7 +1,7 @@
 :root {
     /* || Colors */
     --clr-dark: black;
-    --clr-primary: #040926;
+    --clr-primary: rgb(32, 32, 32);
     --clr-accent: #251351;
     /* || Fonts */
     --font-size: clamp(1.6rem, 2vh, 1.8rem)
@@ -49,15 +49,16 @@ img {
 h1{
     font-size: calc(var(--font-size) + 2rem);
 }
-h3 {
+.section__article>h3 {
     font-size: calc(var(--font-size) + 0.6rem);
     font-weight: bold;
+    padding-bottom: 1.5rem;
 }
 
 /* || Header Block */
 .header {
     width: 100%;
-    padding: 3em 1em 2em 1em;
+    padding: 3rem 1rem 2rem 1rem;
 }
 
 .header__title {
@@ -81,18 +82,21 @@ h3 {
 .section {
     display: flex;
     flex-flow: column nowrap;
-    padding: 0 1.5em;
+    padding: 0 2rem;
+    padding-bottom: 3rem;
 }
+
 .section__header {
     font-size: calc(var(--font-size) + 1.2rem);
     font-weight: bold;
+    padding-bottom: 1.5rem;
 }
 .section__article {
     display: inherit;
     flex-flow: column nowrap;
 }
-.section>p {
-
+p, code, img {
+    padding-bottom: 3rem;
 }
 
 
