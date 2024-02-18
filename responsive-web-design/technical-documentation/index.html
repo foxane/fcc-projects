@@ -105,8 +105,53 @@
                 <ul>
                     <li>Always make sure to use an appropriate image format for your website images (such as PNG or JPG), and make sure to optimize the file size using a graphics editor before you put them on your website.</li>
                     <li>You can make use of CSS features like gradients and shadows to implement visual effects without using images.</li>
-                    <li>You can use media queries inside the media attribute on <span class="term">&lt;source&gt;</span> elements nested inside <span class="term">&lt;video&gt;</span>/<span class="term">&lt;audio&gt;</span> elements to serve video/audio files as appropriate for different devices (responsive video/audio).</li>
+                    <li>You can use media queries inside the media attribute on <span class="term">&lt;source&gt;</span> elements nested inside &lt;video&gt;</span>/<span class="term">&lt;audio&gt;</span> elements to serve video/audio files as appropriate for different devices (responsive video/audio).</li>
                 </ul>
+            </article>
+        </section>
+
+        <section id="typhography" class="section main-section">
+            <header>Responsive Typhography</header>
+            <p>Responsive typography describes changing font sizes within media queries or using viewport units to reflect lesser or greater amounts of screen real estate.</p>
+            
+            <article class="section__article">
+                <h3>Using media queries for responsive typography</h3>
+                <p>In this example, we want to set our level 1 heading to be <span class="term">4rem</span>, meaning it will be four times our base font size. That's a really large heading! We only want this jumbo heading on larger screen sizes, therefore we first create a smaller heading then use media queries to overwrite it with the larger size if we know that the user has a screen size of at least <span class="term">1200px.</span></p>
+                <pre>
+                    <code>
+                        html {
+                            font-size: 1em;
+                          }
+                          
+                          h1 {
+                            font-size: 2rem;
+                          }
+                          
+                          @media (min-width: 1200px) {
+                            h1 {
+                              font-size: 4rem;
+                            }
+                          }                          
+                    </code>
+                </pre>
+                <p>On mobile the heading is smaller:</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design/mdn-rwd-font-mobile.png" alt="page mobile view">
+                <p>On desktop, however, we see the larger heading size:</p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design/mdn-rwd-font-desktop.png" alt="dekstop page view">
+                <p>As this approach to typography shows, you do not need to restrict media queries to only changing the layout of the page. They can be used to tweak any element to make it more usable or attractive at alternate screen sizes.</p>
+            </article>
+
+            <article>
+                <h3>Using viewport units for responsive typography</h3>
+                <P>Viewport units <span class="term">vw</span> can also be used to enable responsive typography, without the need for setting breakpoints with media queries. <span class="term">1vw</span> is equal to one percent of the viewport width, meaning that if you set your font size using <span class="term">vw</span>, it will always relate to the size of the viewport.</P>
+                <pre>
+                    <code>
+                        h1 {
+                            font-size: 6vw;
+                          }
+                    </code>
+                </pre>
+                <p>The problem with doing the above is that the user loses the ability to zoom any text set using the vw unit, as that text is always related to the size of the viewport. <span class="highlight">Therefore you should never set text using viewport units alone.</span></p>
             </article>
         </section>
 

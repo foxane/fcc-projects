@@ -1,3 +1,19 @@
 @media (max-width: 800) {
     /* || mobile view */
 }
+
+.section:active,
+.section:hover,
+.section:focus {
+    background-color: aliceblue;
+}
+
+img {
+    max-width: 100%;
+}
+.term {
+    background-color: aqua;
+}
+.highlight {
+    background-color: antiquewhite;
+}
