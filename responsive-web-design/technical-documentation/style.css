@@ -124,7 +124,8 @@ code::before {
     left: 2rem;
 }
 code::after {
-    content: "copy";
+    font-family: "Font Awsome 6 Free";
+    content: "\f0c5";
     position: absolute;
     top:-3.2rem;
     right: 2rem;
