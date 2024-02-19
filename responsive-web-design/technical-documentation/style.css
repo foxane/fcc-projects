@@ -7,8 +7,9 @@
     --clr-primary: rgb(32, 32, 32);
     --clr-light: grey;
     --clr-accent: #251351;
+    --clr-font: white;
     /* || Fonts */
-    --font-size: clamp(1.6rem, 2vh, 1.8rem)
+    --font-size: clamp(1.6rem, 2vh, 2.1rem)
 }
 
 /* || Global */
@@ -24,10 +25,10 @@ html {
 body {
 
     width: 100%;
-    max-width: 1000px;
+    max-width: 1500px;
 
     background-color: var(--clr-primary);
-    color: white;
+    color: var(--clr-font);
     font-family: Helvetica, Arial, sans-serif;
     font-size: var(--font-size);
     line-height: calc(var(--font-size) + 65%);
@@ -141,6 +142,17 @@ code > .indent {
     white-space: pre-wrap;
 }
 
+/* || Links */
+.source:any-link {
+    color: var(--clr-font);
+    text-decoration: none;
+    transition: all 0.25s;
+}
+.source:hover,
+.source:focus {
+    color: var(--clr-light);
+}
+
 /* || CSS/HTML Terms */
 .term {
     border: 1px solid var(--clr-light);
@@ -164,6 +176,10 @@ code > .indent {
         display: block;
         width: max-content;
     }
+    .main-container {
+        width: 100%;
+    }
+    
     .navbar {
         position:sticky;
         top: 14%;
@@ -173,14 +189,19 @@ code > .indent {
     }
     .navbar__title {
         font-size: calc(var(--font-size) + 0.5rem);
-        font-weight: bold;
+        font-weight: 600;
+        border-bottom: 2px solid;
+        padding-bottom: 0.5em;
+        text-align: center;
     }
-    ul {
+    .navbar ul {
         padding-inline-start: 2rem;
-        list-style: circle;
+        list-style-position: inside;
+        list-style:disc;
         font-family: monospace;
+        padding-top: 0.5em;
     }
-    .main-container {
-        width: 100%;
+    .nav-link {
+        
     }
 }
