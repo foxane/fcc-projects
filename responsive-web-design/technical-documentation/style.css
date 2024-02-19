@@ -92,7 +92,30 @@ h1{
 /* || Footer */
 footer {
     width: 100%;
-    height: 10rem;
+    height: 6rem;
+    text-align: center;
+    grid-row: 2/ -1;
+    grid-column: 1/-1;
+
+    font-size: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+   
+    border-top: 1px solid var(--clr-light);
+}
+footer a:any-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-light);
+    transition: all 0.25s;
+}
+footer a:hover,
+footer a:focus {
+    color: var(--clr-font);
+    transform: rotate(360deg);
 }
 /* || Code Block */
 
@@ -140,13 +163,13 @@ code > .indent {
 
 /* || Links */
 .source:any-link {
-    color: var(--clr-font);
+    color: var(--clr-light);
     text-decoration: none;
     transition: all 0.25s;
 }
 .source:hover,
 .source:focus {
-    color: var(--clr-light);
+    color: var(--clr-font);
 }
 
 /* || CSS/HTML Terms */
@@ -164,7 +187,7 @@ code > .indent {
         width: 95%;
         display: grid;
         grid-template-columns: 1fr 3fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 6rem;
         column-gap: 3rem;
         margin: 0 auto;
     }
