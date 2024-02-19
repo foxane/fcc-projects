@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro');
+
 :root {
     /* || Colors */
     --clr-dark: black;
@@ -109,6 +111,9 @@ code {
     border-top: 3.5rem solid var(--clr-light);
     border-radius: 0.5rem;
 
+    font-family: 'Anonymous Pro', 'Courier New', Courier, monospace;
+    letter-spacing: 0.1ch;
+
     white-space: pre-line;
 }
 code::before {
@@ -118,11 +123,15 @@ code::before {
     left: 2rem;
 }
 code::after {
-    font-family: "Font Awsome 6 Free";
-    content: "\f0c5";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: '\f0c5';
     position: absolute;
     top:-3.2rem;
-    right: 2rem;
+    right: 4rem;
+}
+code:hover::after {
+    cursor: not-allowed;
 }
 .html::before {
     content: "html";
