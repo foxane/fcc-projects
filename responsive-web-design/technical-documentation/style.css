@@ -24,6 +24,7 @@ html {
 body {
 
     width: 100%;
+    max-width: 1000px;
 
     background-color: var(--clr-primary);
     color: white;
@@ -68,7 +69,6 @@ h1{
     display: flex;
     flex-flow: column nowrap;
     width: 85%;
-    max-width: 1000px;
     margin: 0 auto;
     row-gap: 5rem;
 }
@@ -162,19 +162,23 @@ code > .indent {
     }
     .header {
         display: block;
-        min-width: max-content;
+        width: max-content;
     }
     .navbar {
         position:sticky;
-        top: 15%;
+        top: 14%;
+        right: 0;
         padding-right: 1rem;
-        line-height: 4rem;
-        border-right: 1px solid;
+        line-height: 3.3rem;
+    }
+    .navbar__title {
+        font-size: calc(var(--font-size) + 0.5rem);
+        font-weight: bold;
     }
     ul {
-        padding-inline-start: 0;
-        list-style: none;
-
+        padding-inline-start: 2rem;
+        list-style: circle;
+        font-family: monospace;
     }
     .main-container {
         width: 100%;
