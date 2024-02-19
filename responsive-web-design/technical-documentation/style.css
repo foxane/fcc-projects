@@ -169,7 +169,7 @@ code > .indent {
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 1fr;
-        column-gap: 2rem;
+        column-gap: 3rem;
         margin: 0 auto;
     }
     .header {
@@ -190,18 +190,24 @@ code > .indent {
     .navbar__title {
         font-size: calc(var(--font-size) + 0.5rem);
         font-weight: 600;
-        border-bottom: 2px solid;
-        padding-bottom: 0.5em;
-        text-align: center;
+
+        padding-bottom: 2rem;
     }
     .navbar ul {
         padding-inline-start: 2rem;
         list-style-position: inside;
-        list-style:disc;
+        list-style: none;
         font-family: monospace;
-        padding-top: 0.5em;
+        border-left: 1px solid var(--clr-light);
     }
-    .nav-link {
-        
+    .nav-link:any-link {
+        display: block;
+        background: linear-gradient(180deg, var(--clr-light), var(--clr-light)) no-repeat left;
+        background-size: 0 100%;
+        transition: all 0.25s;
+    }
+    .nav-link:hover,
+    .nav-link:focus {
+        background-size: 100% 100%;
     }
 }
