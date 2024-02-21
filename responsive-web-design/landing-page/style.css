@@ -1,0 +1,34 @@
+@import url(https://fonts.google.com/specimen/Overpass?preview.text_type=custom);
+@import url(https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom);
+
+:root {
+    /* ||| Colors */
+    /* || Primary */
+    --clr-cta: hsl(356, 100%, 66%);
+    --clr-cta-2: hsl(355, 100%, 74%);
+    --clr-heading: hsl(208, 49%, 24%);
+    /* || Neutral */
+    --clr-text: hsl(0, 0, 100%);
+    --clr-text-footer: hsl(240, 2%, 79%);
+    --clr-text-body: hsl(207, 13%, 34%);
+    --clr-bg-footer: hsl(240, 10%, 16%);
+    /* || Hero Gradients */
+    --clr-hero-gradient: hsl(13, 100%, 72%);
+    --clr-hero-gradient-2: hsl(353, 100%, 62%);
+    /* || Body Gradients */
+    --clr-bg-body: hsl(237, 17%, 21%);
+    --clr-bg-body: hsl(237, 23%, 32%);
+
+    /* ||| Font */
+    --fs: clamp(1.6rem, 5vh, 2.4rem);
+    --ff-overpass: Overpass, Helvetica, sans-serif;
+    --ff-ubuntu: Ubuntu, Helvetica, sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
