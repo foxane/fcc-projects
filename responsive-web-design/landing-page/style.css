@@ -163,3 +163,9 @@ footer {
     background-color: var(--clr-bg-footer);
     color: var(--clr-text-footer);
 }
+
+footer a:any-link {
+    font-family: monospace;
+    text-decoration: none;
+    color: var(--clr-text-footer)
+}
