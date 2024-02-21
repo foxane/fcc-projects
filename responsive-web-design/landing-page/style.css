@@ -7,7 +7,7 @@
     --clr-cta-2: hsl(355, 100%, 74%);
     --clr-heading: hsl(208, 49%, 24%);
     /* || Neutral */
-    --clr-text: hsl(0, 0, 100%);
+    --clr-text: white;
     --clr-text-footer: hsl(240, 2%, 79%);
     --clr-text-body: hsl(207, 13%, 34%);
     --clr-bg-footer: hsl(240, 10%, 16%);
@@ -22,6 +22,10 @@
     --fs: clamp(1.6rem, 5vh, 2.4rem);
     --ff-overpass: 'Overpass', Helvetica, sans-serif;
     --ff-ubuntu: 'Ubuntu', Helvetica, sans-serif;
+
+    /* || Padding */
+    /* m = mobile */
+    --padding-m-horizotal: 0 2rem;
 }
 * {
     padding: 0;
@@ -41,6 +45,9 @@ body {
     grid-template-rows: 1fr, 1fr, 1fr;
     grid-template-columns: 1fr;
 }
+img {
+    width: 100%;
+}
 
 /* || Header */
 header {
@@ -49,9 +56,10 @@ header {
     background-color: var(--clr-hero-gradient);
 }
 .logo {
-    max-width: 50%;
+    width: 40%;
+    max-width: 50rem;
     margin: 0 auto;
-    padding: 1.5rem 0;
+    padding: 3rem 0 0 0;
     filter: invert();
 }
 .navbar {
@@ -62,15 +70,70 @@ main {
     grid-area: 2/1/3/2 ;
 }
 .hero {
-    min-height: 80vh;
-    background-image: linear-gradient(to bottom, var(--clr-hero-gradient), var(--clr-hero-gradient-2));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    row-gap: 10rem;
+
+    height: 85vh;
+    padding: 2rem;
+
+    background-image: linear-gradient(170deg, var(--clr-hero-gradient), var(--clr-hero-gradient-2));
+    font-size: calc(var(--fs) + 0.5em);
+    text-align: center;
+
+    border-radius: 0 0 0 5rem;
 }
+.hero__header {
+    min-height: 25%;
+}
+.hero__description {
+    font-size: calc(var(--fs) + 0.2em);
+    font-weight: 300;
 
+    padding-top: 1rem;
+}
+.hero__form {
+    min-height: 25%;
+    width: 100%;
 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
 
+    font-size: calc(var(--fs) + 0.3rem);
+}
+.hero__form label {
+    font-weight: 400;
+}
+#email {
+    width: 90%;
+    height: 30%;
+    
+    font-size: var(--fs);
+    font-weight: 600;
+    text-align: center;
 
+    color: var(--clr-text);
+    background-color: var(--clr-cta);
 
+    border: 1px solid var(--clr-text);
+    border-radius: 1rem;
+}
+#submit {
+    width: 20rem;
+    height: 6rem;
 
+    color: var(--clr-cta);
+    font-size: var(--fs);
+    font-weight: 600;
+    background-color: var(--clr-text);
+    border: 1px solid var(--clr-text);
+
+    border-radius: 5rem;
+}
 
 
 
