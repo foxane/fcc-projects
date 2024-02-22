@@ -266,7 +266,7 @@ iframe {
     flex-flow: column nowrap;
     align-items: center;
     color: var(--clr-text-body);
-
+    margin: 5rem 0;
 }
 
 .feature__card {
@@ -288,19 +288,20 @@ iframe {
 }
 .feature__card:last-of-type {
     border-bottom: 1px solid;
+    padding-bottom: 2rem;
 }
 /* || Form */
 .form {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
     min-height: 20rem;
     font-size: calc(var(--fs) + 1rem);
     color: var(--clr-text-body);
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 #email {
     min-height: 3.5rem;
