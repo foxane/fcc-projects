@@ -34,6 +34,7 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     line-height: 1.4;
@@ -43,7 +44,7 @@ body {
 
     display: grid;
     grid-template-rows: 1fr, 1fr, 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
 }
 img {
     width: 100%;
@@ -75,7 +76,7 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    row-gap: 10rem;
+    row-gap: rem;
 
     height: 85vh;
     padding: 2rem;
@@ -94,47 +95,6 @@ main {
     font-weight: 300;
 
     padding-top: 1rem;
-}
-.hero__form {
-    min-height: 25%;
-    width: 100%;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2rem;
-
-    font-size: calc(var(--fs) + 0.3rem);
-}
-.hero__form label {
-    font-weight: 400;
-}
-#email {
-    width: 90%;
-    height: 30%;
-    
-    font-size: var(--fs);
-    font-weight: 600;
-    text-align: center;
-
-    color: var(--clr-text);
-    background-color: var(--clr-cta);
-
-    border: 1px solid var(--clr-text);
-    border-radius: 1rem;
-}
-#submit {
-    width: 20rem;
-    height: 6rem;
-
-    color: var(--clr-cta);
-    font-size: var(--fs);
-    font-weight: 600;
-    background-color: var(--clr-text);
-    border: 1px solid var(--clr-text);
-
-    border-radius: 5rem;
 }
 /* || Sections */
 /* || Product */

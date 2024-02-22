@@ -30,11 +30,10 @@
                 <h1 class="hero__title">The #1 Bakery</h1>
                 <p class="hero__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
-            <form class="hero__form" id="form" action="https://www.freecodecamp.com/email-submit" method="get">
-                <label for="email">Subscribe to become our monthly ingredients</label>
-                <input id="email" type="email" name="email" placeholder="Enter your email">
-                <input id="submit" type="submit">
-            </form>
+            <div class="hero__buttons">
+                <a class="hero__button1" href="#form">Subscribe</a>
+                <a class="hero__button2" href="#product">Learn More</a>
+            </div>
         </section>
         <section id="product" class="product">
             <h3>Our Products</h3>
@@ -80,7 +79,13 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, modi!</p>
             </div>
         </section>
-
+        <section id="form" class="form">
+            <form class="form" id="form" action="https://www.freecodecamp.com/email-submit" method="get">
+                <label for="email">Subscribe to become our monthly ingredients</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email">
+                <input id="submit" type="submit">
+            </form>
+        </section>
     </main>
 
     <footer id="contact" class="contact">
