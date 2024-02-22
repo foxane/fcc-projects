@@ -266,6 +266,7 @@ iframe {
     flex-flow: column nowrap;
     align-items: center;
     color: var(--clr-text-body);
+
 }
 
 .feature__card {
@@ -285,7 +286,46 @@ iframe {
     text-align: center;
     margin: auto;
 }
-
+.feature__card:last-of-type {
+    border-bottom: 1px solid;
+}
+/* || Form */
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    min-height: 20rem;
+    font-size: calc(var(--fs) + 1rem);
+    color: var(--clr-text-body);
+    margin-bottom: 2rem;
+}
+#email {
+    min-height: 3.5rem;
+    min-width: 80%;
+    padding: 0.5rem;
+    font-size: var(--fs);
+    text-align: center;
+    border-radius: 1rem;
+    border: 3px solid var(--clr-text-body);
+    background-color: var(--clr-text);
+}
+#submit {
+    font-size: var(--fs);
+    padding: 0.5em;
+    background-color: var(--clr-cta);
+    color: var(--clr-text);
+    border-radius: 1rem;
+}
+#submit:hover,
+#submit:focus {
+    color: var(--clr-cta);
+    background-color: var(--clr-text);
+    cursor: pointer;
+    border: 1px solid var(--clr-cta);
+}
 
 
 
