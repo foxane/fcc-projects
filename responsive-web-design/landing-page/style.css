@@ -246,7 +246,29 @@ main {
 }
 /* || Feature */
 .feature {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     color: var(--clr-text-body);
+}
+
+.feature__card {
+    display:  flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 2rem;
+}
+.feature__content {
+    width: fit-content;
+    text-align: left;
+}
+.feature__card i {
+    font-size: 5rem;
+    width: 8rem;
+    text-align: center;
+    margin: auto;
 }
 
 
