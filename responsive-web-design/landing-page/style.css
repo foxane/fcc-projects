@@ -75,12 +75,11 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    row-gap: rem;
+    row-gap: 5rem;
 
     height: 70vh;
-    padding: 2rem;
 
-    background-image: linear-gradient(170deg, var(--clr-hero-gradient), var(--clr-hero-gradient-2));
+    background-image: linear-gradient(to bottom, var(--clr-hero-gradient), var(--clr-hero-gradient-2));
     font-size: calc(var(--fs) + 0.5em);
     text-align: center;
 
@@ -95,10 +94,59 @@ main {
 
     padding-top: 1rem;
 }
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: clamp(0.5rem, 4vw, 10rem);
+}
+.hero__button1:any-link, .hero__button2:any-link {
+    display: inline-block;
+    text-decoration: none;
+
+    font-size: calc(var(--fs) + 0.1rem) ;
+    padding: 0.5em 1em;
+    border: 1px solid var(--clr-text);
+    border-radius: 5rem;
+    white-space: nowrap;
+}
+.hero__button1 {
+    color: var(--clr-cta);
+    background-color: var(--clr-text);
+}
+.hero__button2 {
+    color: var(--clr-text);
+    background-color: var(--clr-cta);
+}
+.hero__button1:hover,
+.hero__button1:focus {
+    color: var(--clr-text);
+    background-color: var(--clr-cta-2);
+}
+.hero__button2:hover,
+.hero__button2:focus {
+    color: var(--clr-cta);
+    background-color: var(--clr-text);
+}
+
 /* || Sections */
 /* || Product */
 .product {
     color: var(--clr-text-body);
+}
+.product__image {
+    width: 100%;
+    height: 50rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.product1 {
+    background-image: url(https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjR8fHxlbnwwfHx8fHw%3D);
+}
+.product2 {
+    background-image: url(https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.product3 {
+    background-image: url(https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 /* || Review */
 .review {
