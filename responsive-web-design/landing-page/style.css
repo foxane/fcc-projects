@@ -56,6 +56,7 @@ header {
     grid-area: 1/1/2/2;
 
     background-color: var(--clr-hero-gradient);
+
 }
 .logo {
     width: 70%;
@@ -78,15 +79,20 @@ main {
     row-gap: 5rem;
 
     height: 70vh;
+    padding: 0 1rem;
 
     background-image: linear-gradient(to bottom, var(--clr-hero-gradient), var(--clr-hero-gradient-2));
     font-size: calc(var(--fs) + 0.5em);
     text-align: center;
 
     border-radius: 0 0 0 15rem;
+
+    position: relative;
+    overflow: hidden;
 }
 .hero__header {
     min-height: 25%;
+    z-index: 1;
 }
 .hero__description {
     font-size: calc(var(--fs) + 0.2em);
@@ -98,6 +104,7 @@ main {
     display: flex;
     justify-content: center;
     column-gap: clamp(0.5rem, 4vw, 10rem);
+    z-index: 1;
 }
 .hero__button1:any-link, .hero__button2:any-link {
     display: inline-block;
@@ -126,6 +133,12 @@ main {
 .hero__button2:focus {
     color: var(--clr-cta);
     background-color: var(--clr-text);
+}
+/* | Hero background */
+.hero svg {
+    position: absolute;
+    z-index: 0;
+    right: -85%;
 }
 
 /* || Sections */
