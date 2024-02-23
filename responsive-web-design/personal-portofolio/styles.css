@@ -63,7 +63,9 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 5rem;
 
+    font-family: 'josefin sans', sans-serif;
     background-image: linear-gradient(to bottom, var(--clr-primary) 10%, var(--clr-primary-2));
 }
 
