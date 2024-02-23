@@ -1,0 +1,41 @@
+/* || Dividers */
+.hero__div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero__div svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1.3px);
+    height: 103px;
+}
+
+.hero__div .shape-fill {
+    fill: #ff0000;
+}
+
+
+.projects__div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.projects__div svg {
+    position: relative;
+    display: block;
+    width: calc(145% + 1.3px);
+    height: 103px;
+}
+
+.projects__div .shape-fill {
+    fill: #FFE948;
+}
