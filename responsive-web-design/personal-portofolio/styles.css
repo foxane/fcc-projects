@@ -3,12 +3,21 @@
 
 :root {
     --clr-primary: #0D1B2A;
+    --clr-primary-2: #1B263B;
+    --clr-secondary: #415A77;
+    --clr-secondary-2: #778DA9;
+    --clr-accent: #E0E1DD;
 }
 
 
 body {
     background-color: var(--clr-primary);
     color: white;
+}
+header {
+    background-color: var(--clr-primary-2);
+    position: sticky;
+    top:0;
 }
 /* || Dividers */
 .hero {
@@ -31,7 +40,7 @@ body {
 }
 
 .hero__div .shape-fill {
-    fill: #ff0000;
+    fill: var(--clr-primary-2);
 }
 
 .projects {
