@@ -41,7 +41,19 @@ body {
     font-family: 'permanent marker', sans-serif;
 }
 .header__navbar {
+    display: flex;
+    gap: 2rem;
     font-family: 'josefin sans', sans-serif;
+    list-style: none;
+}
+.header__navbar :any-link {
+    text-decoration: none;
+    color: var(--clr-text);
+    transition: all 0.25s;
+}
+.header__navbar :hover,
+.header__navbar :focus {
+    color: var(--clr-secondary-2);
 }
 
 
