@@ -34,6 +34,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1;
+    background-color: var(--clr-primary);
 }
 .header__logo {
     font-size: calc(var(--fs) + 2rem);
@@ -50,6 +51,8 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+
+    background-image: linear-gradient(to bottom, var(--clr-primary) 10%, var(--clr-primary-2));
 }
 
 
