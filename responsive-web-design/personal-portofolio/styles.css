@@ -158,10 +158,13 @@ body {
     width: 20rem;
     background-color: var(--clr-accent-2);
 }
-
-
 .see-more {
     width: 100%;
+}
+footer {
+    min-height: 50vh;
+    padding-top: 10vh;
+    text-align: center;
 }
 
 
