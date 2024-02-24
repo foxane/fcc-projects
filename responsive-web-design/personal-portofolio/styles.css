@@ -8,7 +8,7 @@
     --clr-accent-2: #ffd60a;
 
 
-    --fs: clamp(1.6rem, 6vh, 2.1rem)
+    --fs: clamp(1.6rem, 6vh + 6vw , 2.2rem)
 }
 * {
     padding: 0;
@@ -53,22 +53,51 @@ body {
 }
 .header__navbar :hover,
 .header__navbar :focus {
-    color: var(--clr-secondary-2);
+    color: var(--clr-accent);
 }
 
 .hero {
+    position: relative;
+
     height: 100vh;
+
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
-
 }
-.highlight {
-    font-family: 'josefin sans';
-    border-bottom: 2px solid var(--clr-accent);
+.hero__text {
+     position: relative;
 }
+
+.hero__shape {
+    content: '';
+    width: 35rem;
+    height: 10rem;
+    background-color: var(--clr-bg);
+    position: absolute;
+    right: -2rem;
+    top: 0%;
+    animation: slide 2s ease 1 forwards,
+    rotate 2s ease 2s 1 forwards;
+}
+@keyframes slide {
+    0% {
+
+    }
+    100% {
+        width: 0.2rem;
+        background-color: var(--clr-accent);
+    }
+}
+@keyframes rotate {
+    100% {
+        right:63%;
+        transform: rotate(90deg);
+        height: 12ch;
+    }
+}
+
 
 
 
