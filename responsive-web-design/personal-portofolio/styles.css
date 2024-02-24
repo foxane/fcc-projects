@@ -124,6 +124,9 @@ body {
     
     background-color: var(--clr-primary-2);
     border-radius: 1rem;
+    border: 2px solid var(--clr-primary);
+
+    transition: all 0.25s;
 }
 .project__card img {
     border-radius: 1rem;
@@ -131,13 +134,15 @@ body {
 .project__card:hover,
 .project__card:focus,
 .project__card:focus-within {
-    box-shadow: 1px 1px 10px 1px var(--clr-bg);
+    box-shadow:  0.3em 0.3em 1em  var(--clr-bg);
+    border: 2px solid var(--clr-accent);
 }
-.project__card a:any-link {
+.project__card a:any-link,
+.see-more a:any-link {
     display: block;
     color: black;
     background-color: var(--clr-accent);
-    width: 10rem;
+    width: 15rem;
     margin: 0 auto;
     padding: 0.3em;
     border-radius: 1rem;
@@ -147,8 +152,10 @@ body {
     transition: all 0.25s;
 }
 .project__card a:hover,
-.project__card a:focus {
-    width: 100%;
+.project__card a:focus,
+.see-more a:hover,
+.see-more a:focus {
+    width: 20rem;
     background-color: var(--clr-accent-2);
 }
 
