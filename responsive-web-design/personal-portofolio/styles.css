@@ -166,6 +166,13 @@ footer {
     padding-top: 10vh;
     text-align: center;
 }
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
 
 
 
