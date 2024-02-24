@@ -65,6 +65,8 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--clr-bg);
 }
 .hero__text {
      position: relative;
@@ -87,7 +89,6 @@ body {
     }
     100% {
         width: 0.2rem;
-        background-color: var(--clr-accent);
     }
 }
 @keyframes rotate {
@@ -95,18 +96,71 @@ body {
         right:63%;
         transform: rotate(90deg);
         height: 12ch;
+        background-color: var(--clr-accent);
     }
+}
+.projects {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 20rem;
+    text-align: center;
+
+    background-color: var(--clr-primary);
+}
+.projects h2 {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+}
+.project__card {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+    padding: 2rem;
+    
+    background-color: var(--clr-primary-2);
+    border-radius: 1rem;
+}
+.project__card img {
+    border-radius: 1rem;
+}
+.project__card:hover,
+.project__card:focus,
+.project__card:focus-within {
+    box-shadow: 1px 1px 10px 1px var(--clr-bg);
+}
+.project__card a:any-link {
+    display: block;
+    color: black;
+    background-color: var(--clr-accent);
+    width: 10rem;
+    margin: 0 auto;
+    padding: 0.3em;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-family: 'poppins';
+    font-weight: 500;
+    transition: all 0.25s;
+}
+.project__card a:hover,
+.project__card a:focus {
+    width: 100%;
+    background-color: var(--clr-accent-2);
 }
 
 
+.see-more {
+    width: 100%;
+}
 
 
 
 
 /* || Dividers */
-.projects {
-    position: relative;
-}
 .projects__div {
     position: absolute;
     top: 0;
@@ -124,7 +178,7 @@ body {
 }
 
 .projects__div .shape-fill {
-    fill: var(--clr-bg-2);
+    fill: var(--clr-bg);
 }
 
 .contact {
@@ -147,5 +201,5 @@ body {
 }
 
 .contact__div .shape-fill {
-    fill: #FFE948;
+    fill: var(--clr-primary);
 }
