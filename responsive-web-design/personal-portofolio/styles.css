@@ -79,7 +79,7 @@ body {
     right: -2rem;
     top: 0%;
     animation: slide 2s ease 1 forwards,
-    rotate 2s ease 2s 1 forwards;
+    rotate 2s ease 1s 1 forwards;
 }
 @keyframes slide {
     0% {
