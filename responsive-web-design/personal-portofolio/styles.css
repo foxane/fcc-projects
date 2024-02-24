@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --clr-primary: #0D1B2A;
-    --clr-primary-2: #1B263B;
-    --clr-secondary: #415A77;
-    --clr-secondary-2: #778DA9;
-    --clr-text: #E0E1DD;
-    --clr-cta:#721817;
+    --clr-bg: #000814;
+    --clr-primary: #001d3d;
+    --clr-primary-2:#003566;
+    --clr-accent:#ffc300;
+    --clr-accent-2: #ffd60a;
+
 
     --fs: clamp(1.6rem, 6vh, 2.1rem)
 }
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-bg);
     color: white;
     font-size: var(--fs);
     font-family: poppins, sans-serif;
@@ -34,7 +34,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-bg);
 }
 .header__logo {
     font-size: calc(var(--fs) + 2rem);
@@ -62,8 +62,13 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-}
 
+
+}
+.highlight {
+    font-family: 'josefin sans';
+    border-bottom: 2px solid var(--clr-accent);
+}
 
 
 
@@ -90,7 +95,7 @@ body {
 }
 
 .projects__div .shape-fill {
-    fill: var(--clr-primary-2);
+    fill: var(--clr-bg-2);
 }
 
 .contact {
