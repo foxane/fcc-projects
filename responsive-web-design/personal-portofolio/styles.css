@@ -35,6 +35,9 @@ body {
     top: 0;
     z-index: 1;
     background-color: var(--clr-bg);
+    border-bottom: 2px solid var(--clr-bg);
+    transition: all 0.5s;
+    box-shadow: 1px 1px 10px 5px var(--clr-bg);
 }
 .header__logo {
     font-size: calc(var(--fs) + 2rem);
@@ -50,10 +53,26 @@ body {
     text-decoration: none;
     color: var(--clr-text);
     transition: all 0.25s;
+    border-bottom: 1px solid var(--clr-bg);
 }
 .header__navbar :hover,
 .header__navbar :focus {
     color: var(--clr-accent);
+    border-bottom: 1px solid var(--clr-accent);
+    box-shadow: var(--clr-accent);
+
+}
+.header:hover,
+.header:focus,
+.header:focus-within {
+    border-bottom: 2px solid var(--clr-accent);
+
+
+}
+@media (max-width:500px) {
+    .header__navbar {
+        display: none;
+    }
 }
 
 .hero {
