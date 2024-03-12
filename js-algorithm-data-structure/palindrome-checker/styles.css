@@ -11,38 +11,39 @@
 :root {
     /* Colors */
     --clr-bg: #023047;
-    --clr-bg-app: #8ECAE6;
+    --clr-bg-app: #064463;
     --clr-bg-tip: #219EBC;
     --clr-cta-1: #FFB703;
     --clr-cta-2: #FB8500;
-    --clr-text: #000;
-    --clr-text-invert: #fff;
+    --clr-text: #fff;
+    --clr-text-invert: #000;
     /* Fonts */
     --ff-header: 'Raleway', sans-serif;
     --ff-body: 'Nunito Sans', sans-serif;
-    --fw-header: 600;
+    --fw-header: 800;
     --fw-body: 600;
-    --fw-cta: 600;
+    --fw-cta: 800;
     /* 1rem is set to 10px with html font size */
-    --fs-header: clamp(2rem, 5vh, 2.5rem);
+    --fs-header: clamp(3rem, 8vh, 5rem);
     --fs-body: clamp(1.6rem, 3vh, 2.2rem);
     /* Paddings */
     --p-container: 2rem;
-    --p-button: 1em;
+    --p-button: 0.1em 0.6em;
     /* Margins */
-
+    --m-top-bottom: 2.5rem 0;
     /* Layouts */
-    --gap-row: 2rem;
+    --gap-row: 1rem;
     --gap-col: 1rem;
-    --app-width: clamp(50rem, 80vw, 60rem);
+    --app-width: clamp(40rem, 80vw, 60rem);
 }
 
 html {
     font-size: 62.5%;
 }
+
 body {
     background-color: var(--clr-bg);
-    font: var(--fw-body) var(--fs-body) var(--ff-body);
+    color: var(--clr-text);
 
     display: flex;
     flex-flow: column nowrap;
@@ -50,8 +51,47 @@ body {
     align-items: center;
     gap: var(--gap-col) var(--gap-col);
 
-    height: 100vh;
+    min-height: 100vh;
+}
+
+body,
+input,
+button {
+    font: var(--fw-body) var(--fs-body) var(--ff-body);
+}
+h1{
+    font: var(--fw-header) var(--fs-header) var(--ff-header);
+
+    text-shadow: 1px 1px 10px 10px var(--clr-cta-1);/* TODO fix shadow */
+}
+.app {
+    background-color: var(--clr-bg-app);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 1rem;
+
+    width: var(--app-width);
+    padding: var(--p-container);
+    margin: var(--m-top-bottom);
+}
+.app__input {
+    border-radius: 0.2rem;
+    border-bottom: 0.4rem solid var(--clr-cta-1);
+}
+.app__button {
+    background-color: var(--clr-cta-1);
+    border-radius: 2px;
+    border: 2px outset var(--clr-bg);
+    font-weight: var(--fw-cta);
+
+    padding: var(--p-button);
 }
 .tip {
-    width: var(--app-width);
+    background-color: var(--clr-bg-app);
+    width: calc(var(--app-width) - 6rem);
+    margin: 0 auto;
+    padding: var(--p-container);
 }
