@@ -79,7 +79,8 @@ h1{
 }
 .app__input {
     border-radius: 0.2rem;
-    border-bottom: 0.4rem solid var(--clr-cta-1);
+    border: none;
+    border-bottom: 0.4rem solid white;
     width: 25ch;
     text-align: center;
 
@@ -113,4 +114,10 @@ h1{
 }
 .app__button:active {
     color: var(--clr-text);
+}
+
+.result {
+    color: var(--clr-cta-1);
+    font-weight: 800;
+    font-family: var(--ff-header);
 }
