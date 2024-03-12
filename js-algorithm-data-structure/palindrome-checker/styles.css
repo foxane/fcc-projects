@@ -1,4 +1,36 @@
-body {
-    background-color: black;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Colors */
+    --clr-bg: #023047;
+    --clr-bg-app: #8ECAE6;
+    --clr-bg-tip: #219EBC;
+    --clr-cta-1: #FFB703;
+    --clr-cta-2: #FB8500;
+    --clr-text: #000;
+    --clr-text-invert: #fff;
+    /* Fonts */
+    --ff-header: 'Raleway', sans-serif;
+    --ff-body: 'Nunito Sans', sans-serif;
+    --fw-header: 600;
+    --fw-body: 600;
+    --fw-cta: 600;
+    /* 1rem is set to 10px with html font size */
+    --fs-header: clamp(2rem, 5vh, 2.5rem);
+    --fs-body: clamp(1.6rem, 3vh, 2.2rem);
+    /* Paddings */
+    --p-container: 2rem;
+    --p-button: 1em;
+    /* Margins */
+    
+    /* Layouts */
+    --gap-row: 2rem;
+    --gap-col: 1rem;
 }
