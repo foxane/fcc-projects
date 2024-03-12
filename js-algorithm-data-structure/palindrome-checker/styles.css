@@ -7,6 +7,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 :root {
     /* Colors */
     --clr-bg: #023047;
@@ -29,8 +30,28 @@
     --p-container: 2rem;
     --p-button: 1em;
     /* Margins */
-    
+
     /* Layouts */
     --gap-row: 2rem;
     --gap-col: 1rem;
+    --app-width: clamp(50rem, 80vw, 60rem);
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: var(--clr-bg);
+    font: var(--fw-body) var(--fs-body) var(--ff-body);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-col) var(--gap-col);
+
+    height: 100vh;
+}
+.tip {
+    width: var(--app-width);
 }
