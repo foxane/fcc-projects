@@ -12,7 +12,7 @@
     /* Colors */
     --clr-bg: #023047;
     --clr-bg-app: #064463;
-    --clr-bg-tip: #219EBC;
+    --clr-bg-tip: #023047;
     --clr-cta-1: #FFB703;
     --clr-cta-2: #FB8500;
     --clr-text: #fff;
@@ -80,6 +80,10 @@ h1{
 .app__input {
     border-radius: 0.2rem;
     border-bottom: 0.4rem solid var(--clr-cta-1);
+    width: 25ch;
+    text-align: center;
+
+    transition: border 0.25s;
 }
 .app__button {
     background-color: var(--clr-cta-1);
@@ -88,10 +92,25 @@ h1{
     font-weight: var(--fw-cta);
 
     padding: var(--p-button);
+    transition: background-color 0.25s, border 0.25s;
 }
 .tip {
-    background-color: var(--clr-bg-app);
+    background-color: var(--clr-bg-tip);
+    border-radius: 0.5rem;
     width: calc(var(--app-width) - 6rem);
     margin: 0 auto;
     padding: var(--p-container);
+}
+
+.app__input:hover,
+.app__input:focus {
+    border-bottom: 0.4rem solid var(--clr-cta-2);
+}
+.app__button:hover {
+    background-color: var(--clr-cta-2);
+    border: 2px outset var(--clr-text);
+    cursor: pointer;
+}
+.app__button:active {
+    color: var(--clr-text);
 }
