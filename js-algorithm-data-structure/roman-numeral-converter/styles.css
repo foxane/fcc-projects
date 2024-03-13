@@ -60,7 +60,7 @@ h1 {
     min-height: 20rem;
     max-width: clamp(300px, 80%, 500px);
     margin: var(--m-top-bottom);
-    padding: 1rem;
+    padding: 0 3rem;
 
     display: flex;
     flex-flow: column nowrap;
