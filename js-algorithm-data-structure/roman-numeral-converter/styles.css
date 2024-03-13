@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+    --clr-bg: #2B2D42;
+    --clr-bg-app: #8D99AE;
+    --clr-bg-result: #EDF2F4;
+    --clr-cta: #EF233C;
+    --clr-text: black;
+    --clr-text-invert: white;
+    --clr-shadow: #000;
+    --clr-border: #EDF2F4;
+    /* font */
+    --ff: Nunito, sans-serif;
+    --fs: clamp(1.6rem, 3vh, 2.2rem);
+    /* padding */
+    --p-around: 0.5rem;
+    /* margin */
+    --m-top-bottom: 2rem auto;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body,
+.app__input,
+.app__btn {
+    font: var(--fs) var(--ff);
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+
+    margin: 10rem 0;
+}
+
+h1 {
+    font-family: Angkor, sans-serif;
+    font-weight: 500;
+    color: var(--clr-text-invert);
+    text-align: center;
+}
+
+.app {
+    background-color: var(--clr-bg-app);
+    background-image: linear-gradient(to top, var(--clr-bg-app) , var(--clr-bg-result));
+    border: 6px solid var(--clr-border);
+    border-radius: 0.4rem;
+    box-shadow: 1px 10px 30px 0px var(--clr-shadow);
+
+    min-height: 20rem;
+    max-width: clamp(300px, 80%, 500px);
+    margin: var(--m-top-bottom);
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.app__input {
+    background-color: var(--clr-bg-app);
+    border: 3px solid var(--clr-bg);
+    border-radius: 0.4rem;
+
+    font-weight: 700;
+    font-size: 120%;
+    text-align: center;
+    width: 100%;
+}
+.app__btn {
+    padding: 0.2em 0.5em;
+    border-radius: 0.4rem;
+    border: 1px solid var(--clr-bg);
+    background-color: var(--clr-bg);
+    color: var(--clr-text-invert);
+    font-weight: 700;
+    transition: background-color 0.10s;
+    width: 100%;
+}
+.app__btn:hover {
+    background-color: #EF233C;
+    cursor: pointer;
+}
+.output {
+    font-size: calc(var(--fs) + 1rem);
+    font-weight: 700;
+    max-width: clamp(300px, 80%, 500px);
+    margin: 5rem auto 0 auto;
+    text-align: center;
+    background-color: var(--clr-bg-app);
+    padding: 1rem;
+    border: 6px solid var(--clr-border);
+}
+.alert {
+    border: 6px solid var(--clr-cta);
+}
+.hidden {
+    display: none;
+}
