@@ -103,7 +103,7 @@ h1 {
     text-align: center;
     background-color: var(--clr-bg-app);
     padding: 1rem;
-    border: 6px solid var(--clr-border);
+    border: 6px solid green;
 }
 
 .alert {

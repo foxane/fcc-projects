@@ -17,3 +17,29 @@ const reference = [
     [4, 'IV'],
     [1, 'I']
   ];
+
+const convert = num => {
+    if (input.value === 0) {
+        output.innerText = 'Please enter a number between 1 - 3999'
+        output.classList.add('alert')
+        return ''
+    }
+    output.classList.remove('alert')
+    for (var i = 0; i < reference.length; i++) {
+        if (num >= reference[i][0]) {
+            return reference[i][1] + convert(num - reference[i][0]);
+        }
+    }
+}
+
+
+btn.addEventListener('click', () => {
+    output.innerText = convert(input.value)
+    output.classList.remove('hidden')
+})
+input.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+    output.classList.remove('hidden')
+    output.classList.toggle('alert')
+    }
+})
