@@ -1,4 +1,4 @@
-const form = document.getElementById('form')
+const form = document.getElementById("form");
 const input = document.getElementById("number");
 const btn = document.getElementById("convert-btn");
 const output = document.getElementById("output");
@@ -23,33 +23,33 @@ const ref = [
 /* main function */
 const toRoman = (int) => {
   if (int <= 0) {
-    return ''
+    return "";
   }
   for (var i = 0; i < ref.length; i++) {
-    if(int >= ref[i][0]) {
-      return ref[i][1] + toRoman(int - ref[i][0])
+    if (int >= ref[i][0]) {
+      return ref[i][1] + toRoman(int - ref[i][0]);
     }
   }
-}
+};
 
 /* validate user input */
 const isValid = (str, int) => {
-  let msg = ''
+  let msg = "";
   if (!str || str.match(/[e.]/g)) {
-      msg = 'Please enter a valid number!'
+    msg = "Please enter a valid number";
   } else if (int <= 0) {
-      msg = "Roman numerals don't have a 0!"
+    msg = "Please enter a number greater than or equal to 1";
   } else if (int > 3999) {
-      msg = 'Enter number between 1 - 3999!'
+    msg = "Please enter a number less than or equal to 3999";
   } else {
-      return true;
+    return true;
   }
 
   /* error msg */
-  output.classList.add('alert')
+  output.classList.add("alert");
   output.innerText = msg;
   return false;
-}
+};
 
 /* execute */
 function execute() {
@@ -57,28 +57,27 @@ function execute() {
   const int = parseInt(numStr, 10);
 
   /* update output */
-  input.value = ''
-  output.classList.remove('hidden')
+  input.value = "";
+  output.classList.remove("hidden");
 
   if (isValid(numStr, int)) {
-    output.classList.remove('alert')
-      output.innerText = toRoman(int);
+    output.classList.remove("alert");
+    output.innerText = toRoman(int);
   }
 }
 
-
 /*  event listener */
-btn.addEventListener('click', () => {
-  execute()
-})
+btn.addEventListener("click", () => {
+  execute();
+});
 
-input.addEventListener('keyup', (e) => {
-  if (e.key === 'Enter') {
-    execute()
+input.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    execute();
   }
-})
+});
 
-form.addEventListener('submit', e => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   updateUI();
 });

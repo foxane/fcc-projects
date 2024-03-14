@@ -12,6 +12,7 @@
     /* font */
     --ff: Nunito, sans-serif;
     --fs: clamp(1.6rem, 3vh, 2.2rem);
+    --fs-output: clamp(1.8rem, 4vh, 2.4rem);
     /* padding */
     --p-around: 0.5rem;
     /* margin */
@@ -101,7 +102,7 @@ h1 {
 }
 
 .output {
-    font-size: calc(var(--fs) + 1rem);
+    font-size: var(--fs-output);
     font-weight: 700;
     max-width: clamp(300px, 80%, 500px);
     margin: 5rem auto 0 auto;
