@@ -103,11 +103,13 @@ h1 {
     text-align: center;
     background-color: var(--clr-bg-app);
     padding: 1rem;
-    border: 6px solid green;
+    border: 6px solid var(--clr-border);
+    background-color: green;
 }
 
 .alert {
-    border: 6px solid var(--clr-cta);
+    border: 6px solid var(--clr-border);
+    background-color: var(--clr-cta);
 }
 
 .hidden {
