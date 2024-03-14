@@ -40,7 +40,12 @@ body {
     background-color: var(--clr-bg);
     color: var(--clr-text);
 
-    margin: 10rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    padding-top: 10rem;
+    min-height: 100vh;
 }
 
 h1 {
@@ -115,12 +120,23 @@ h1 {
 .hidden {
     display: none;
 }
+
 a,
 a:any-link {
     text-decoration: none;
-    color: var(--clr-text-invert);
+    color: var(--clr-bg-result);
     font-family: monospace;
+    border-left: 2px solid var(--clr-bg);
+    transition: all 0.25s;
 }
+
+a:hover,
+a:focus {
+    color: var(--clr-cta);
+    border-left: 2px solid var(--clr-cta);
+}
+
 footer {
-    background-color: var(--clr-shadow);
+    margin-top: 3rem;
+    text-align: center;
 }
