@@ -1,7 +1,9 @@
+const form = document.getElementById('form')
 const input = document.getElementById("number");
 const btn = document.getElementById("convert-btn");
 const output = document.getElementById("output");
 
+/* Roman reference */
 const ref = [
   [1000, "M"],
   [900, "CM"],
@@ -18,6 +20,7 @@ const ref = [
   [1, "I"],
 ];
 
+/* main function */
 const toRoman = (int) => {
   if (int <= 0) {
     return ''
@@ -29,28 +32,53 @@ const toRoman = (int) => {
   }
 }
 
+/* validate user input */
 const isValid = (str, int) => {
   let msg = ''
   if (!str || str.match(/[e.]/g)) {
-      msg = 'Please enter a valid number'
+      msg = 'Please enter a valid number!'
   } else if (int <= 0) {
-      msg = 'Roman numerals dont have 0'
+      msg = "Roman numerals don't have a 0!"
   } else if (int > 3999) {
-      msg = 'Roman numerals have max of 3999'
+      msg = 'Enter number between 1 - 3999!'
   } else {
       return true;
   }
+
+  /* error msg */
   output.classList.add('alert')
   output.innerText = msg;
   return false;
 }
 
-btn.addEventListener('click', () => {
+/* execute */
+function execute() {
   const numStr = input.value;
   const int = parseInt(numStr, 10);
 
+  /* update output */
+  input.value = ''
   output.classList.remove('hidden')
+
   if (isValid(numStr, int)) {
+    output.classList.remove('alert')
       output.innerText = toRoman(int);
   }
+}
+
+
+/*  event listener */
+btn.addEventListener('click', () => {
+  execute()
 })
+
+input.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    execute()
+  }
+})
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  updateUI();
+});

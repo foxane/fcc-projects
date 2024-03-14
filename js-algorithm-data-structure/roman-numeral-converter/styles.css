@@ -104,7 +104,7 @@ h1 {
     background-color: var(--clr-bg-app);
     padding: 1rem;
     border: 6px solid var(--clr-border);
-    background-color: green;
+    background-color: rgb(75, 223, 75);
 }
 
 .alert {
@@ -114,4 +114,13 @@ h1 {
 
 .hidden {
     display: none;
+}
+a,
+a:any-link {
+    text-decoration: none;
+    color: var(--clr-text-invert);
+    font-family: monospace;
+}
+footer {
+    background-color: var(--clr-shadow);
 }
